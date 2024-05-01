@@ -1,0 +1,2863 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
+"POT-Creation-Date: 2024-04-16 07:27 UTC\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. [campaign]: id=journey_frost_mage
+#. [achievement_group]
+#: Frost_Mage/_main.cfg:16
+#: Frost_Mage/achievements.cfg:5
+msgid "Journey of a Frost Mage"
+msgstr ""
+
+#. [campaign]: id=journey_frost_mage
+#: Frost_Mage/_main.cfg:17
+msgid "JoaFM"
+msgstr ""
+
+#. [campaign]: id=journey_frost_mage
+#: Frost_Mage/_main.cfg:21
+msgid "Magic takes turns in unexpected ways. Meet the Frost Mage as she takes her first step into the big world and the great challenges that appear in her path. Let the story unfold!"
+msgstr ""
+
+#. [campaign]: id=journey_frost_mage
+#: Frost_Mage/_main.cfg:23
+msgid "Mage"
+msgstr ""
+
+#. [campaign]: id=journey_frost_mage
+#: Frost_Mage/_main.cfg:23
+msgid "Normal"
+msgstr ""
+
+#. [campaign]: id=journey_frost_mage
+#: Frost_Mage/_main.cfg:25
+msgid "High Mage"
+msgstr ""
+
+#. [campaign]: id=journey_frost_mage
+#: Frost_Mage/_main.cfg:25
+msgid "Hard"
+msgstr ""
+
+#. [about]
+#: Frost_Mage/_main.cfg:39
+msgid "Author"
+msgstr ""
+
+#. [about]
+#: Frost_Mage/_main.cfg:48
+msgid "Playtesters"
+msgstr ""
+
+#. [language]
+#: Frost_Mage/_main.cfg:83
+msgid "electric"
+msgstr ""
+
+#. [language]
+#: Frost_Mage/_main.cfg:84
+msgid "natural"
+msgstr ""
+
+#. [language]
+#: Frost_Mage/_main.cfg:85
+msgid "water"
+msgstr ""
+
+#. [achievement]: id=save_village
+#: Frost_Mage/achievements.cfg:8
+msgid "Fight Back"
+msgstr ""
+
+#. [achievement]: id=save_village
+#: Frost_Mage/achievements.cfg:10
+msgid "Defeat the Orc mercenaries attacking the village"
+msgstr ""
+
+#. [achievement]: id=save_village
+#: Frost_Mage/achievements.cfg:11
+msgid "Village Saved!"
+msgstr ""
+
+#. [achievement]: id=gather_allies
+#: Frost_Mage/achievements.cfg:15
+msgid "Gather Allies"
+msgstr ""
+
+#. [achievement]: id=gather_allies
+#: Frost_Mage/achievements.cfg:17
+msgid "Gain Drake and Elf allies"
+msgstr ""
+
+#. [achievement]: id=gather_allies
+#: Frost_Mage/achievements.cfg:18
+msgid "Allies gathered!"
+msgstr ""
+
+#. [sub_achievement]: id=drakes
+#: Frost_Mage/achievements.cfg:21
+msgid "Drake Allies"
+msgstr ""
+
+#. [sub_achievement]: id=elves
+#: Frost_Mage/achievements.cfg:26
+msgid "Elf Allies"
+msgstr ""
+
+#. [achievement]: id=nature_power
+#: Frost_Mage/achievements.cfg:32
+msgid "Nature Power"
+msgstr ""
+
+#. [achievement]: id=nature_power
+#: Frost_Mage/achievements.cfg:33
+msgid "Awaken the Forest's Power"
+msgstr ""
+
+#. [scenario]: id=01_the_attack
+#: Frost_Mage/scenarios/01_the_attack.cfg:5
+msgid "The Attack"
+msgstr ""
+
+#. [side]
+#. [side]: id=zurik, type=Sergeant
+#: Frost_Mage/scenarios/01_the_attack.cfg:23
+#: Frost_Mage/scenarios/01_the_attack.cfg:52
+msgid "Humans"
+msgstr ""
+
+#. [side]: type=Orcish Warrior, id=kurug-ruk
+#: Frost_Mage/scenarios/01_the_attack.cfg:34
+msgid "Kurug-Ruk"
+msgstr ""
+
+#. [side]: type=Orcish Warrior, id=kurug-ruk
+#. [side]
+#. [side]: type=Orcish Slurbow, id=Slurbow
+#: Frost_Mage/scenarios/01_the_attack.cfg:37
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:36
+#: Frost_Mage/scenarios/08_the_temple.cfg:68
+msgid "Orcs"
+msgstr ""
+
+#. [side]: id=zurik, type=Sergeant
+#: Frost_Mage/scenarios/01_the_attack.cfg:49
+msgid "Zurik"
+msgstr ""
+
+#. [part]
+#: Frost_Mage/scenarios/01_the_attack.cfg:60
+msgid "It was the start of a new day in the small village of Rennor. The villagers had just began their daily chores, when the sound of orcish horns came to their ears..."
+msgstr ""
+
+#. [unit]: type=Aqua Initiate, gender=female, id=erinna
+#. [set_variable]
+#: Frost_Mage/scenarios/01_the_attack.cfg:84
+#: Frost_Mage/scenarios/09_pursuit.cfg:304
+msgid "Erinna"
+msgstr ""
+
+#. [unit]: type=Elvish Scholar, id=lorendor
+#. [side]
+#: Frost_Mage/scenarios/01_the_attack.cfg:99
+#: Frost_Mage/scenarios/08_the_temple.cfg:28
+msgid "Lorendor"
+msgstr ""
+
+#. [message]: speaker=kurug-ruk
+#: Frost_Mage/scenarios/01_the_attack.cfg:129
+msgid "Hand over the mage, villager, or suffer the consequences!"
+msgstr ""
+
+#. [message]: speaker=villager
+#: Frost_Mage/scenarios/01_the_attack.cfg:134
+msgid "(How we are going to defend ourselves!) Mr. Orc, no mage is here. Please let us go!"
+msgstr ""
+
+#. [message]: speaker=kurug-ruk
+#: Frost_Mage/scenarios/01_the_attack.cfg:139
+msgid "You aren't going to talk you way out of this. Send the mage to us at once!"
+msgstr ""
+
+#. [message]: speaker=zurik
+#: Frost_Mage/scenarios/01_the_attack.cfg:144
+msgid "Oh no! I wasn't expecting this, but very well. It seems we can't expect a little bit of peace without some Orcish interruption."
+msgstr ""
+
+#. [message]: speaker=zurik
+#: Frost_Mage/scenarios/01_the_attack.cfg:149
+msgid "Don't worry, villagers. My companions and I will protect you. (Send a messenger to the nearest town at once!)"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/01_the_attack.cfg:154
+msgid "Strange... A faint aura... But very unusual magic... Let's see. Probably I can track the magic user."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/01_the_attack.cfg:159
+msgid "No, no, no! How did they know about me? Orcs aren't that good in magic! But who wants to find me so badly? At least Lieutenant Zurik is here."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/01_the_attack.cfg:164
+msgid "Move Lorendor near Erinna"
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/01_the_attack.cfg:168
+#: Frost_Mage/scenarios/01_the_attack.cfg:252
+#: Frost_Mage/scenarios/01_the_attack.cfg:372
+#: Frost_Mage/scenarios/06_dark_hour.cfg:547
+#: Frost_Mage/scenarios/06_dark_hour.cfg:636
+msgid "Death of Lorendor"
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/01_the_attack.cfg:172
+#: Frost_Mage/scenarios/01_the_attack.cfg:256
+#: Frost_Mage/scenarios/01_the_attack.cfg:376
+#: Frost_Mage/scenarios/06_dark_hour.cfg:386
+#: Frost_Mage/scenarios/06_dark_hour.cfg:535
+#: Frost_Mage/scenarios/06_dark_hour.cfg:624
+msgid "Death of Erinna"
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/01_the_attack.cfg:176
+#: Frost_Mage/scenarios/01_the_attack.cfg:260
+#: Frost_Mage/scenarios/01_the_attack.cfg:384
+msgid "Death of Zurik"
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/01_the_attack.cfg:180
+#: Frost_Mage/scenarios/01_the_attack.cfg:264
+#: Frost_Mage/scenarios/01_the_attack.cfg:388
+msgid "Turns run out"
+msgstr ""
+
+#. [note]
+#: Frost_Mage/scenarios/01_the_attack.cfg:190
+#: Frost_Mage/scenarios/01_the_attack.cfg:273
+#: Frost_Mage/scenarios/01_the_attack.cfg:400
+msgid "Erinna levels up through AMLAs. To unlock her advancement, take each necessary AMLA at least once."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/01_the_attack.cfg:211
+msgid "Finally, I have found you!"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/01_the_attack.cfg:215
+msgid "Who... Who are you?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/01_the_attack.cfg:219
+msgid "Please allow me to introduce myself. I am called Lorendor, the Scholar. I think you have magical abilities, and of a quite unusual type. I was passing by and sensed your aura. Then curiosity took hold of me, and here I am."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/01_the_attack.cfg:223
+msgid "(Oh no! First the Orc, then this Mr. Elf. How can everyone sense my aura suddenly?) Please, leave me alone. My village is under threat by the Orcs. I must go help. If I surrender, surely they will let the villagers go. It's me they are after."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/01_the_attack.cfg:227
+msgid "I am afraid that will be unwise, young lady. Orcs aren't the merciful type. They are simply going to attack your village anyway even if you surrender. Just for the fun of it."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/01_the_attack.cfg:231
+msgid "I can't sit here and watch!"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/01_the_attack.cfg:235
+msgid "Ah, but I was going suggest just the opposite. Fighting them. The people here love nature, right? There are so many Ancient trees close to the village. I believe there are some Elves nearby."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/01_the_attack.cfg:239
+msgid "How? No one has ever seen any."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/01_the_attack.cfg:243
+msgid "They are a bit shy about showing themselves to humans. But they will probably have no problem with talking to a fellow elf."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/01_the_attack.cfg:248
+msgid "Move Lorendor to the Great Tree at (10,18)"
+msgstr ""
+
+#. [unit]: type=Elvish Archer, gender=female, id=eliel
+#: Frost_Mage/scenarios/01_the_attack.cfg:293
+msgid "Eliel"
+msgstr ""
+
+#. [message]: speaker=eliel
+#: Frost_Mage/scenarios/01_the_attack.cfg:310
+msgid "Welcome, renowned scholar, to the Forests of Rennor."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/01_the_attack.cfg:314
+msgid "I express my gratitude for your hospitality. But I need your urgent help."
+msgstr ""
+
+#. [message]: speaker=eliel
+#: Frost_Mage/scenarios/01_the_attack.cfg:318
+msgid "With the Orcs, I presume. We were going to act anyway. Let me call my companions."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/01_the_attack.cfg:322
+msgid "Thank you very much. I have nothing more to ask."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/01_the_attack.cfg:368
+msgid "Defeat Kurug-Ruk"
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/01_the_attack.cfg:380
+msgid "Death of Eliel"
+msgstr ""
+
+#. [note]
+#: Frost_Mage/scenarios/01_the_attack.cfg:396
+msgid "Try to save the Elves. They will come back next scenario to help you."
+msgstr ""
+
+#. [message]: speaker=kurug-ruk
+#: Frost_Mage/scenarios/01_the_attack.cfg:436
+msgid "(I had better get out of here!)"
+msgstr ""
+
+#. [message]: speaker=zurik
+#: Frost_Mage/scenarios/01_the_attack.cfg:458
+msgid "(Whew! That was tough. At least reinforcements aren't far away) My heartfelt thanks, elven folk, for helping us in the time of need."
+msgstr ""
+
+#. [message]: speaker=eliel
+#: Frost_Mage/scenarios/01_the_attack.cfg:462
+msgid "It's the best for both of us, human commander. We also express our gratitude for your help."
+msgstr ""
+
+#. [message]: speaker=zurik
+#: Frost_Mage/scenarios/01_the_attack.cfg:466
+msgid "The feeling is mutual. Wonder who hired him, though? I don't believe Orcs would bother doing all of this just for kidnapping a little human girl."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/01_the_attack.cfg:470
+msgid "You are right, commander. It doesn't help that their magic abilities aren't that great. Someone with magical senses must have hired them to kidnap this young lady here. In fact, someone with very keen magical senses, because I can sense that no mage has visited this village in months."
+msgstr ""
+
+#. [message]: speaker=zurik
+#: Frost_Mage/scenarios/01_the_attack.cfg:474
+msgid "It seems quite a serious matter. That means I am remaining."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/01_the_attack.cfg:478
+msgid "But why all of a sudden? Is it ... is it because my magical abilites are increasing?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/01_the_attack.cfg:482
+msgid "Exactly. I believe you should leave this area. Otherwise there will be more attacks. Do you have any relatives outside?"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/01_the_attack.cfg:486
+msgid "None, I am afraid. I have an uncle, but he's a soldier, and I don't know where he's now."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/01_the_attack.cfg:490
+msgid "My name is Erinna. Pleased to meet you."
+msgstr ""
+
+#. [message]: speaker=eliel
+#: Frost_Mage/scenarios/01_the_attack.cfg:494
+msgid "I am called Eliel of Rinnor forest. These are my companions. (Introduces everyone)"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/01_the_attack.cfg:498
+msgid "Thank you all. But where should I go now?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/01_the_attack.cfg:502
+msgid "I think the best recourse will be travelling and gaining knowledge. I think I know someone who might be able to help you. I can take you there if you wish. Eliel, my thanks again."
+msgstr ""
+
+#. [message]: speaker=eliel
+#: Frost_Mage/scenarios/01_the_attack.cfg:506
+msgid "(Smiles)"
+msgstr ""
+
+#. [unit]: id=irizna, type=Shadowmistress, gender=female
+#: Frost_Mage/scenarios/01_the_attack.cfg:580
+msgid "Irizna, Lady of Shadows"
+msgstr ""
+
+#. [message]: speaker=irizna
+#: Frost_Mage/scenarios/01_the_attack.cfg:596
+msgid "By Shadows, those stupid Orcs! Can't even defeat a bunch of village-folk, can they? Seems like I will have to do it myself. Wait, what's this?"
+msgstr ""
+
+#. [message]: speaker=irizna
+#: Frost_Mage/scenarios/01_the_attack.cfg:607
+msgid "Hmm. traces of Elven magic, and the aura is a bit different from usual. Raises suspicions. Now, let's go. Lots of preparations required of me."
+msgstr ""
+
+#. [scenario]: id=02_long_road
+#: Frost_Mage/scenarios/02_long_road.cfg:5
+msgid "A Long Road"
+msgstr ""
+
+#. [side]
+#: Frost_Mage/scenarios/02_long_road.cfg:19
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:20
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:24
+#: Frost_Mage/scenarios/06_dark_hour.cfg:24
+msgid "Erinna and friends"
+msgstr ""
+
+#. [side]: type=Dark Sorcerer, type=Necromancer, id=dk
+#. [side]
+#: Frost_Mage/scenarios/02_long_road.cfg:46
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:71
+msgid "Undeads"
+msgstr ""
+
+#. [side]: type=Elvish Captain, id=rowendrin
+#: Frost_Mage/scenarios/02_long_road.cfg:60
+msgid "Rowendrin"
+msgstr ""
+
+#. [side]: type=Elvish Captain, id=rowendrin
+#: Frost_Mage/scenarios/02_long_road.cfg:63
+msgid "Forest Elves"
+msgstr ""
+
+#. [part]
+#: Frost_Mage/scenarios/02_long_road.cfg:77
+msgid "As they were passing through a particularly dense part of a forest, a heavy fog veiled the surroundings..."
+msgstr ""
+
+#. [unit]: id=lirena, type=Elvish Sorceress
+#: Frost_Mage/scenarios/02_long_road.cfg:123
+msgid "Lirena"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/02_long_road.cfg:144
+msgid "Oh no! I can't see anything far away."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/02_long_road.cfg:148
+msgid "Be careful. This will be the best chance for someone to ambush us. (Can this be dark magic at work?)"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/02_long_road.cfg:152
+msgid "Hmm..."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/02_long_road.cfg:157
+msgid "Explore around carefully."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/02_long_road.cfg:161
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:131
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:224
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:394
+msgid "Death of Lorendor or Erinna."
+msgstr ""
+
+#. [message]: speaker=eliel
+#: Frost_Mage/scenarios/02_long_road.cfg:286
+msgid "We have arrived, at last."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/02_long_road.cfg:290
+msgid "Eliel! I didn't hope to see you here!"
+msgstr ""
+
+#. [message]: speaker=eliel
+#: Frost_Mage/scenarios/02_long_road.cfg:294
+msgid "We learned that this place has been overflowing with dark magic, so we thought that we should warn you."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/02_long_road.cfg:298
+msgid "That was why I was having such a bad feeling."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/02_long_road.cfg:302
+msgid "Didn't this place used to be elvish territory?"
+msgstr ""
+
+#. [message]: speaker=eliel
+#: Frost_Mage/scenarios/02_long_road.cfg:306
+msgid "Yes, but not recently. They are probably facing some dark menace right now."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/02_long_road.cfg:310
+msgid "We should help them!"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/02_long_road.cfg:314
+msgid "We are going to need help ourselves. We don't have anyone to recruit. The opponents are many in number, and, unfortunately, nothing except my faerie fire is going to work against them."
+msgstr ""
+
+#. [message]: speaker=fighter1
+#: Frost_Mage/scenarios/02_long_road.cfg:325
+msgid "Er... May I say something?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/02_long_road.cfg:329
+msgid "Sure."
+msgstr ""
+
+#. [message]: speaker=fighter1
+#: Frost_Mage/scenarios/02_long_road.cfg:333
+msgid "A few Drakes live here, in secret, in a hill not far from here."
+msgstr ""
+
+#. [message]: speaker=eliel
+#: Frost_Mage/scenarios/02_long_road.cfg:339
+msgid "I think one of my friends mentioned that a few Drakes live here, in secret, in a hill not far from here."
+msgstr ""
+
+#. [message]: speaker=erinna
+#. [message]: speaker=highmage
+#: Frost_Mage/scenarios/02_long_road.cfg:346
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:347
+msgid "What!"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/02_long_road.cfg:350
+msgid "They might be able to beat these Skeletons, with a little bit of help from us. Let's go talk to them."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/02_long_road.cfg:354
+msgid "Also, if we manage to kill the necromancer controlling these undead, that should take care of the undead as well."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/02_long_road.cfg:359
+msgid "Move an unit to the Drake Village at (4,33)."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/02_long_road.cfg:363
+msgid "Death of Lorendor, Erinna or Eliel."
+msgstr ""
+
+#. [unit]: id=raizr, type=Drake Burner
+#: Frost_Mage/scenarios/02_long_road.cfg:400
+msgid "Raizr"
+msgstr ""
+
+#. [message]
+#: Frost_Mage/scenarios/02_long_road.cfg:423
+msgid "(Looks in awe)."
+msgstr ""
+
+#. [message]: speaker=drakeleader
+#: Frost_Mage/scenarios/02_long_road.cfg:427
+msgid "Why do you enter our territory, elvenfolk?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/02_long_road.cfg:431
+msgid "We express our deepest apologies. Great chieftain, we humbly request your aid."
+msgstr ""
+
+#. [message]: speaker=drakeleader
+#: Frost_Mage/scenarios/02_long_road.cfg:435
+msgid "For what?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/02_long_road.cfg:439
+msgid "A group of Undead is advancing this way. We need to stop them. We are travelers and unable to defend against such a big army."
+msgstr ""
+
+#. [message]: speaker=drakeleader
+#: Frost_Mage/scenarios/02_long_road.cfg:443
+msgid "(Talks with others) ..."
+msgstr ""
+
+#. [message]: speaker=drakeleader
+#: Frost_Mage/scenarios/02_long_road.cfg:447
+msgid "Very well. We will grant it. You can recruit our Burners now. But we will watch you too."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/02_long_road.cfg:451
+msgid "We are in your debt, chieftain."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/02_long_road.cfg:468
+msgid "Defeat the enemy leader (automatically defeats his undead)."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/02_long_road.cfg:472
+msgid "Death of Lorendor, Erinna, Eliel or the Drake Chieftain and Raizr."
+msgstr ""
+
+#. [note]
+#: Frost_Mage/scenarios/02_long_road.cfg:483
+msgid "You can recruit Drake Burners now. Any surviving Burners will be available in the next scenario after an event, and will be part of Erinna's army."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/02_long_road.cfg:529
+msgid "Now this forest will be in peace once again."
+msgstr ""
+
+#. [message]: speaker=rowendrin
+#: Frost_Mage/scenarios/02_long_road.cfg:534
+msgid "We are grateful. Please do come to the keep. Everyone would be pleased to meet you."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/02_long_road.cfg:539
+msgid "We will be honoured."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/02_long_road.cfg:545
+msgid "Move Lorendor near the Elvish Keep."
+msgstr ""
+
+#. [message]: speaker=rowendrin
+#: Frost_Mage/scenarios/02_long_road.cfg:578
+msgid "My heartfelt gratitude. If not for you, we would have perished surely. It didn't come into my knowledge that Drakes would also be here; but let there be only friendship between our people. Chieftain, if your people need anything, please let us know."
+msgstr ""
+
+#. [message]: speaker=drakeleader
+#: Frost_Mage/scenarios/02_long_road.cfg:582
+msgid "Only let us live in peace, forestfolk. We seek no enemity from you."
+msgstr ""
+
+#. [message]: speaker=rowendrin
+#. [event]
+#: Frost_Mage/scenarios/02_long_road.cfg:586
+#: Frost_Mage/scenarios/09_pursuit.cfg:1069
+msgid "Agreed."
+msgstr ""
+
+#. [message]: speaker=rowendrin
+#: Frost_Mage/scenarios/02_long_road.cfg:598
+msgid "Great scholar, we are honoured to have you in our forest. Please be my guest and rest yourselves."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/02_long_road.cfg:602
+msgid "Unfortunately, we cannot stay for too long, captain. Some people are looking for us, and if we do not move, then there's bound to be more trouble in this peaceful forest."
+msgstr ""
+
+#. [message]: speaker=lirena
+#: Frost_Mage/scenarios/02_long_road.cfg:607
+msgid "Is it by any chance related to this girl here?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/02_long_road.cfg:611
+msgid "Probably it is related to me, instead of my new apprentice, my lady."
+msgstr ""
+
+#. [message]: speaker=rowendrin
+#: Frost_Mage/scenarios/02_long_road.cfg:616
+msgid "Please, let me send some of my soldiers with you then. It is the least I can do for you, after what you have done for us, Great Scholar."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/02_long_road.cfg:620
+msgid "Thank you very much, captain."
+msgstr ""
+
+#. [message]: speaker=eliel
+#: Frost_Mage/scenarios/02_long_road.cfg:625
+msgid "We will take our leave, as well, Erinna. Unlike the Scholar, we cannot venture far from our home. We have to return."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/02_long_road.cfg:630
+msgid "I really thought you would come with me, but, thank you for everything! Maybe we will meet again in the future."
+msgstr ""
+
+#. [message]: speaker=eliel
+#: Frost_Mage/scenarios/02_long_road.cfg:635
+msgid "Thank you. I name you my friend, Erinna, and wish you luck on your journey."
+msgstr ""
+
+#. [message]: speaker=lirena
+#: Frost_Mage/scenarios/02_long_road.cfg:693
+msgid "I'm badly wounded! I must hide."
+msgstr ""
+
+#. [scenario]: id=03_a_very_long_road
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:5
+msgid "A Very Long Road"
+msgstr ""
+
+#. [side]: type=Bandit, id=bandit
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:33
+msgid "Bandits"
+msgstr ""
+
+#. [side]: type=Troll Warrior, id=troll
+#. [side]: type=Troll Hero, id=trollhero
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:55
+#: Frost_Mage/scenarios/08_the_temple.cfg:83
+msgid "Trolls"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:98
+msgid "Don't tell me we have to cross this forest too!"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:102
+msgid "Are you feeling uncomfortable? Elves usually prefer forests. But do not worry. We will be following an old road that used to be here."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:106
+msgid "I don't like it. Something feels creepy here."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:110
+msgid "Right. We should be wary. I don't think our pursuers will let you go away so easily. (I am sensing the presence of evil. Not nearby, but it is here. Thankfully Rowendrin gave us some troops to escort ourselves.)"
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:127
+msgid "Reach the end of the path."
+msgstr ""
+
+#. [note]
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:141
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:233
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:382
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:403
+msgid "Elvish Avenger and Elvish Sharpshooters have AMLAs."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:154
+msgid "(Oh no! Did the darkness...)"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:158
+msgid "No! Something bad is comming!"
+msgstr ""
+
+#. [message]: speaker=dk
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:184
+msgid "(roars in laughter)"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:189
+msgid "(Shocked) No way!"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:193
+msgid "This will not be easy. Normal attacks are not going to hurt undead."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:197
+msgid "Do not worry. I will protect you, no matter how worse the situation becomes."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:201
+msgid "(Eyes glowing) Spirits of the forest, heed my call! Purge this darkness from your domain! Help the people in need!"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:212
+msgid "We must go to the great tree in the middle of the forest. That is where we will receive help."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:220
+msgid "Move Lorendor to the Great Tree at 11,25."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:260
+msgid "Raizr!"
+msgstr ""
+
+#. [message]: speaker=raizr
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:264
+msgid "Thought I should go with you. Great way to see the outer world."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:268
+msgid "You can't believe how happy we are."
+msgstr ""
+
+#. [message]: speaker=raizr
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:272
+msgid "I am, too, little girl. (Looks around) Skeletons love fire, don't they?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:276
+msgid "(Smiles) I guess so. We can try that."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:280
+msgid "But ... I thought elves dislike fire."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:284
+msgid "Normal fire, yes. But faerie fire?"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:288
+msgid "But wouldn't that take a lot of energy from you?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:292
+msgid "Perhaps the forest will help us?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:308
+msgid "A Great Tree at this location? There must be some secret."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:312
+msgid "(Concentrates) ..."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:317
+msgid "I found it. The magic of the forest is concentrated here. Perhaps I can tap into it."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:369
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:390
+msgid "Defeat the Undead leader."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:373
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:470
+msgid "Death of Lorendor, Erinna or Raizr."
+msgstr ""
+
+#. [note]
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:379
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:400
+msgid "All of your Elvish units (except Shamans) can deal arcane damage now, for this scenario only. Units lose this bonus if they advance."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:466
+msgid "Move Lorendor or Erinna to the end of the path."
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Frost_Mage/scenarios/03_a_very_long_road.cfg:489
+msgid "The team has survived this ordeal."
+msgstr ""
+
+#. [scenario]: id=04_the_waters_of_destiny
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:5
+msgid "The Waters of Destiny"
+msgstr ""
+
+#. [side]: id=nagaleader, type=Naga Myrmidon
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:56
+msgid "Nagas"
+msgstr ""
+
+#. [side]: id=sirenelder, type=Mermaid Siren
+#. [side]
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:67
+#: Frost_Mage/scenarios/06_dark_hour.cfg:35
+msgid "Merfolk"
+msgstr ""
+
+#. [side]: id=sirenelder, type=Mermaid Siren
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:71
+msgid "Mara"
+msgstr ""
+
+#. [part]
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:81
+msgid "In a peaceful part of the coastline of the sea, the merfolk academy of magic, Wisdom Falls, was located."
+msgstr ""
+
+#. [part]
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:85
+msgid "Wisdom Falls was a prosperous academy where new mermaids were trained in sea magic."
+msgstr ""
+
+#. [part]
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:89
+msgid "It was headed by an old and wise enchantress, called Mara."
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:164
+msgid "Everything was the same as any other day. $sirenelder.name was busy in the instruction of new mermaids."
+msgstr ""
+
+#. [message]: speaker=sirenelder
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:169
+msgid "As the water ...."
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:174
+msgid "However, the oration was soon interrupted."
+msgstr ""
+
+#. [message]: speaker=inj_fighter
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:203
+msgid "My Lady!"
+msgstr ""
+
+#. [message]: speaker=sirenelder
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:208
+msgid "$inj_fighter.name! What happened to you?"
+msgstr ""
+
+#. [message]: speaker=inj_fighter
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:213
+msgid "They... The Naga... they are attacking..."
+msgstr ""
+
+#. [message]: speaker=sirenelder
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:218
+msgid "What! When would they understand that we want some peace for ourselves, and for them too? Can't they be content with the territory they already have?"
+msgstr ""
+
+#. [message]: speaker=guardian
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:223
+msgid "We had better prepare the defenses, my lady."
+msgstr ""
+
+#. [message]: speaker=sirenelder
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:228
+msgid "Yes, sure. And before that take $inj_fighter.name to the healers at once."
+msgstr ""
+
+#. [message]: speaker=sirenelder
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:232
+msgid "Make sure you don't go into the offensive before their forces are sufficiently thinned. If you act rashly, it is the students who will suffer. Save them at all costs."
+msgstr ""
+
+#. [message]: speaker=guardian
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:236
+msgid "Yes, my lady."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:245
+msgid "Defend the Academy (protect the students)."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:249
+msgid "Death of Mara."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:253
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:349
+msgid "More than one Initiate dies."
+msgstr ""
+
+#. [note]
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:257
+msgid "<span foreground='orange'>Play defensively until the Naga forces are sufficiently weak, then strike.</span>"
+msgstr ""
+
+#. [note]
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:260
+msgid "<span foreground='green'>First unit to die will be saved by $sirenelder.name</span>"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:303
+msgid "Not here, too!"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:308
+msgid "They will be able to hold, but we must hurry."
+msgstr ""
+
+#. [message]: speaker=kurug-ruk
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:326
+msgid "Exactly where do you think you are going?"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:331
+msgid "Not him again!"
+msgstr ""
+
+#. [message]: speaker=raizr
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:336
+msgid "No worries, little girl. You are far from defenseless."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:342
+msgid "Defeat the enemies"
+msgstr ""
+
+#. [objective]
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:346
+msgid "Death of Lorendor, Erinna, Raizr or Mara"
+msgstr ""
+
+#. [message]: speaker=raizr
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:366
+msgid "I've told you!"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:371
+msgid "$sirenelder.name, will you take Erinna as a student? I know she is a human, but she can use Water Magic."
+msgstr ""
+
+#. [message]: speaker=sirenelder
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:376
+msgid "Intriguing. Ability to use Water? Yes, I shall be happy to teach her. Magic can be dangerous, if not properly used."
+msgstr ""
+
+#. [then]
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:438
+msgid "I have managed to save $saved_unit.name somehow, but I will not be able to do it again."
+msgstr ""
+
+#. [then]
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:439
+msgid "$saved_unit.name is resting now, and will be able to fight next turn."
+msgstr ""
+
+#. [else]
+#: Frost_Mage/scenarios/04_the_waters_of_destiny.cfg:451
+msgid "No! We should have been more careful!"
+msgstr ""
+
+#. [scenario]: id=05_the_secret_council
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:5
+msgid "The Secret Concil"
+msgstr ""
+
+#. [side]: type=Lightning Mage, id=highmage
+#. [side]
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:49
+#: Frost_Mage/scenarios/06_dark_hour.cfg:96
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:53
+msgid "The Council"
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:156
+msgid "While Erinna's training continued in Wisdom Falls, Lorendor busied himself with finding more intel. Concerned with the identity of Erinna's attacker, he decided to meet up with a couple of old friends of his."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:161
+msgid "I hope everyone has gotten my message."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:166
+msgid "Move Lorendor to 12,11"
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:187
+msgid "Greetings, O Great Scholar!"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:191
+msgid "Is that sarcasm? From you, $portalmage.name?"
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:195
+msgid "Hah, so you still retain your sense of humor after all these years!"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:199
+msgid "How are the others, $portalmage.name? How's the old wizard?"
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:203
+msgid "As grumpy as ever. As for the others, see for yourselves."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:208
+msgid "Move Lorendor inside the Council Chamber (12,10)"
+msgstr ""
+
+#. [message]: speaker=highmage
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:235
+msgid "(frowning) Lorendor"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:240
+msgid "Yes?"
+msgstr ""
+
+#. [message]: speaker=highmage
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:245
+msgid "Usually it is one of the others who run into trouble, not you. I feel like something is very bad. What is your news?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:250
+msgid "Indeed it is."
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:255
+msgid "...and so Lorendor tells them about Erinna and the mysterious attacks."
+msgstr ""
+
+#. [message]: speaker=highsorceress
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:260
+msgid "We still don't have enough proof that it is done by somebody extremely dangerous. We need more information before we can move."
+msgstr ""
+
+#. [message]: speaker=highmage
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:265
+msgid "Yes, I agree. However, we must not underestimate the threat. Where is the girl right now?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:270
+msgid "Under training, from $sirenelder.name."
+msgstr ""
+
+#. [message]: speaker=highmage
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:275
+msgid "A wise choice. She is protected by Merfolk and Elves, right?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:280
+msgid "And one Drake."
+msgstr ""
+
+#. [message]: speaker=highmage
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:285
+msgid "And one Drake. Good."
+msgstr ""
+
+#. [message]: speaker=lumenstriker
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:290
+msgid "I would add a couple of my men as well. I think it would be wise to start sending our agents out. Wesnoth has often faced dire consequences due to surprise Undead attacks. Best to be careful."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:295
+msgid "That would be excellent, $lumenstriker.name."
+msgstr ""
+
+#. [message]: speaker=firelord
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:300
+msgid "Did somebody mention Drakes? Do bring the girl and the Drake here. I would like to meet them. Especially the Drake."
+msgstr ""
+
+#. [message]: speaker=highmage
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:305
+msgid "Yes, that would be a good idea. We would like to meet them. I think the Merfolk training alone will not be sufficient to bring out her powers, since she is not actually Merfolk herself."
+msgstr ""
+
+#. [message]: speaker=highmage
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:310
+msgid "By the way, I do not see our Merfolk representative here. She never misses these meetings."
+msgstr ""
+
+#. [message]: speaker=inj_fighter
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:342
+msgid "My Lords! Wisdom Falls is attacked by a large army of Undead!"
+msgstr ""
+
+#. [message]: speaker=lumenstriker
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:352
+msgid "Looks like we've already underestimated our enemy. I request permission from the council to deploy our forces at once!"
+msgstr ""
+
+#. [message]: speaker=highmage
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:357
+msgid "Agreed. $lumenstriker.name, gather the forces. They need to march at once."
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:362
+msgid "That will take a lot of time."
+msgstr ""
+
+#. [message]: speaker=firelord
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:367
+msgid "I will leave at once for Wisdom Falls. Flying there won't take much time. Gryphons will carry as many as they can. That should reduce requirements."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:372
+msgid "Excellent idea. I will go with the Gryphons."
+msgstr ""
+
+#. [message]: speaker=highmage
+#: Frost_Mage/scenarios/05_the_secret_concil.cfg:377
+msgid "Try to delay the undead until our forces arrive. Best of luck!"
+msgstr ""
+
+#. [scenario]: id=06_dark_hour
+#: Frost_Mage/scenarios/06_dark_hour.cfg:5
+msgid "Dark Hour"
+msgstr ""
+
+#. [side]: id=orc2, type=Orcish Slurbow
+#. [side]: id=lich1, type=Lich
+#. [side]
+#: Frost_Mage/scenarios/06_dark_hour.cfg:50
+#: Frost_Mage/scenarios/06_dark_hour.cfg:69
+#: Frost_Mage/scenarios/06_dark_hour.cfg:85
+msgid "Undead and Orcs"
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Frost_Mage/scenarios/06_dark_hour.cfg:180
+msgid "Erinna tried her best to learn all that the Mermaids could teach her. Years passed, and soon the time came when she had learned all of their lore by heart."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/06_dark_hour.cfg:184
+msgid "Good morning, my lady. What is my schedule for today? The teachers told me to talk to you first. Has anyting happened?"
+msgstr ""
+
+#. [message]: speaker=sirenelder
+#: Frost_Mage/scenarios/06_dark_hour.cfg:188
+msgid "I am afraid there are no more classes after this, Erinna. We have taught you all that we can. Your training with us is complete."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/06_dark_hour.cfg:192
+msgid "(Shocked) Complete? But I feel like ..."
+msgstr ""
+
+#. [message]: speaker=sirenelder
+#: Frost_Mage/scenarios/06_dark_hour.cfg:196
+msgid "You feel like there is more to learn? That is true. You have potential, Erinna. Now it is upto you to learn and grow. We have given you the foundation. Now you have to forge your own path, that of an Aqua Magus. No longer are you the apprentice."
+msgstr ""
+
+#. [message]: speaker=irizna
+#: Frost_Mage/scenarios/06_dark_hour.cfg:232
+msgid "It seems I should really thank the Merfolk. They did a very good job with the training. Now I can feel your cold aura from tens of miles away, dearie!"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/06_dark_hour.cfg:237
+msgid "Who ... who are you? And what do you want?"
+msgstr ""
+
+#. [message]: speaker=sirenelder
+#: Frost_Mage/scenarios/06_dark_hour.cfg:242
+msgid "Beware, Erinna. This is a Necromancer of the highest calibre."
+msgstr ""
+
+#. [message]: speaker=irizna
+#: Frost_Mage/scenarios/06_dark_hour.cfg:247
+msgid "Ah, I feel flattered! But not just your everyday Necromancer. Allow me the introduction. You are talking to Irizna, the Lady of Shadows."
+msgstr ""
+
+#. [message]: speaker=sirenelder
+#: Frost_Mage/scenarios/06_dark_hour.cfg:252
+msgid "No time for pleasantries, then. What do you want?"
+msgstr ""
+
+#. [message]: speaker=irizna
+#: Frost_Mage/scenarios/06_dark_hour.cfg:257
+msgid "I am really in a good mood today. Not only the preparations are done, but our dearie here is much, much stronger. So I give you an offer. Give her to me, and I might just spare you."
+msgstr ""
+
+#. [message]: speaker=sirenelder
+#: Frost_Mage/scenarios/06_dark_hour.cfg:262
+msgid "No."
+msgstr ""
+
+#. [message]: speaker=irizna
+#: Frost_Mage/scenarios/06_dark_hour.cfg:267
+msgid "Reconsider. I have enough forces to devastate your dear Academy, but I haven't done so yet."
+msgstr ""
+
+#. [message]: speaker=sirenelder
+#: Frost_Mage/scenarios/06_dark_hour.cfg:272
+msgid "I do not care. You will not have the girl."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/06_dark_hour.cfg:277
+msgid "(Privately) Lady $sirenelder.name, please just let me go. I don't want to see you in danger."
+msgstr ""
+
+#. [message]: speaker=sirenelder
+#: Frost_Mage/scenarios/06_dark_hour.cfg:282
+msgid "No, Erinna. Do not ever beg for your freedom and life. The solution is never as simple as just surrender. Especially with these kind of people. What will she do, once she gets her hands on you? Remember what happened to Rennor?"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/06_dark_hour.cfg:287
+msgid "But they do have lots of forces."
+msgstr ""
+
+#. [message]: speaker=sirenelder
+#: Frost_Mage/scenarios/06_dark_hour.cfg:292
+msgid "I have sent a messenger to Lorendor. Hopefully we will get the Council's support. But we must resist until then. Go to the Elves, Erinna. They will need a leader, since Lorendor isn't here."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/06_dark_hour.cfg:297
+msgid "(Shocked) Me?"
+msgstr ""
+
+#. [message]: speaker=sirenelder
+#: Frost_Mage/scenarios/06_dark_hour.cfg:302
+msgid "Obviously. The elves report to Lorendor, and in their absense, to you. I am sure your war strategy lessons will come in handy. And there are veterans to advise you in the camp. Now go."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/06_dark_hour.cfg:308
+msgid "Move Erinna to the empty Keep."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/06_dark_hour.cfg:361
+msgid "We need to organize everyone. An attack is coming. We need to hold until reinforcements arrive. They must not be allowed to destroy the Academy."
+msgstr ""
+
+#. [message]: speaker=raizr
+#: Frost_Mage/scenarios/06_dark_hour.cfg:366
+msgid "I'm with you, as always, little girl."
+msgstr ""
+
+#. [message]: speaker=captain
+#: Frost_Mage/scenarios/06_dark_hour.cfg:371
+msgid "So are the Elves, Lady Erinna. The Scholar entrusted your safety to us. We will fight until the end."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/06_dark_hour.cfg:376
+msgid "Thank you, everyone."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/06_dark_hour.cfg:382
+msgid "Stall the enemies until help arrives. (Turn 7)"
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/06_dark_hour.cfg:390
+#: Frost_Mage/scenarios/06_dark_hour.cfg:539
+#: Frost_Mage/scenarios/06_dark_hour.cfg:628
+msgid "Death of Raizr"
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/06_dark_hour.cfg:394
+#: Frost_Mage/scenarios/06_dark_hour.cfg:543
+#: Frost_Mage/scenarios/06_dark_hour.cfg:632
+#: Frost_Mage/scenarios/06_dark_hour.cfg:723
+#: Frost_Mage/scenarios/06_dark_hour.cfg:1010
+msgid "Death of $sirenelder.name"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/06_dark_hour.cfg:434
+msgid "Erinna! Are you okay?"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/06_dark_hour.cfg:438
+msgid "Yes, so far. Reinforcements?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/06_dark_hour.cfg:442
+msgid "The main force will take some more time, but some of the force is already here. Meet Firelord $firelord.name!"
+msgstr ""
+
+#. [message]: speaker=sirenelder
+#: Frost_Mage/scenarios/06_dark_hour.cfg:521
+msgid "We can't express our gratitude enough, Firelord."
+msgstr ""
+
+#. [message]: speaker=firelord
+#: Frost_Mage/scenarios/06_dark_hour.cfg:525
+msgid "Bah, Forget that! Finally, I get my share of burnt skeleton today!"
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/06_dark_hour.cfg:531
+msgid "Defeat enemy forces or hold them at bay."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/06_dark_hour.cfg:551
+#: Frost_Mage/scenarios/06_dark_hour.cfg:640
+msgid "Death of $firelord.name"
+msgstr ""
+
+#. [message]: speaker=irizna
+#: Frost_Mage/scenarios/06_dark_hour.cfg:572
+msgid "It is time to end this farce."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/06_dark_hour.cfg:604
+msgid "This is bad, very bad. She has opened a direct portal to the Land of the Dead."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/06_dark_hour.cfg:608
+msgid "What should we do now?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/06_dark_hour.cfg:612
+msgid "Same as before. We have to play defensive until the Council's forces arrive. I have a friend there who might know what to do."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/06_dark_hour.cfg:620
+msgid "Stall enemies until the Council's main force arrives. (Turn 12)"
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Frost_Mage/scenarios/06_dark_hour.cfg:687
+msgid "After holding out for quite some days, finally the Council's main force arrived."
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/06_dark_hour.cfg:691
+msgid "Are you all right, Lorendor?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/06_dark_hour.cfg:695
+msgid "We were stalling them somehow. But with the supoort of the main force, hopefully we will be able to stop this undead horde. $portalmage.name, Can you close the portal to the Land of the Dead?"
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/06_dark_hour.cfg:699
+msgid "I think I can, but I have move close to it first. And we'll also need to keep the Undead busy."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/06_dark_hour.cfg:703
+msgid "Fine. We will backup the main force."
+msgstr ""
+
+#. [message]: speaker=sirenelder
+#: Frost_Mage/scenarios/06_dark_hour.cfg:707
+msgid "Our forces will support Erinna's."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/06_dark_hour.cfg:715
+msgid "Move $portalmage.name to the portal."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/06_dark_hour.cfg:719
+#: Frost_Mage/scenarios/06_dark_hour.cfg:1006
+msgid "Death of Heros (Erinna, Raizr, Lorendor)"
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/06_dark_hour.cfg:727
+msgid "Death of Council members ($lumenstriker.name, $portalmage.name)"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/06_dark_hour.cfg:752
+#: Frost_Mage/scenarios/06_dark_hour.cfg:901
+msgid "Finally!"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/06_dark_hour.cfg:856
+msgid "We only have to close the Portal now. $portalmage.name!"
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/06_dark_hour.cfg:860
+msgid "Working on it."
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Frost_Mage/scenarios/06_dark_hour.cfg:885
+msgid "With a loud sound of winds and the feel of static on air, the portal disappeared to nowhere, in the same way that it appeared."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/06_dark_hour.cfg:1002
+#: Frost_Mage/scenarios/09_pursuit.cfg:598
+msgid "Defeat the enemies."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/06_dark_hour.cfg:1014
+msgid "Death of Council members ($portalmage.name, $highmage.name, $lumenstriker.name, $highsorceress.name)"
+msgstr ""
+
+#. [scenario]: id=07_meeting_the_council
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:5
+msgid "Eil-En-Seiril"
+msgstr ""
+
+#. [side]
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:24
+msgid "Guards of Eil-En-Seiril"
+msgstr ""
+
+#. [side]
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:43
+msgid "Evil Spirit"
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:67
+msgid "After the fight in Wisdom Falls concluded, Erinna went to the Council's stronghold, Eil-En-Seiril, with Lorendor at the Council members' advice. Raizr followed them, as usual. The elves who followed Erinna and Lorendor decided to march to Eil-En-Seiril with the Council's army."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:118
+msgid "Why did we land here? Where is the Council?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:122
+msgid "Just after this river. Flying inside is not allowed. We will have to walk over that bridge."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:125
+msgid "Gatekeeper of Eil-En-Seiril"
+msgstr ""
+
+#. [message]: speaker=guardian
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:154
+msgid "Halt. The human may not pass."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:158
+msgid "What is this? I ... can not move!"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:162
+msgid "As a member of the Council, I need to know why, Gatekeeper. Erinna is not a bad person."
+msgstr ""
+
+#. [message]: speaker=guardian
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:166
+msgid "There is something evil inside the human, which is be allowed in the grounds of Eil-En-Seiril. As the Gatekeeper, this is my duty."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:170
+msgid "How's that possible? I did not sense anything wrong in Erinna. We were fighting undead recently. Maybe it is due to that?"
+msgstr ""
+
+#. [message]: speaker=guardian
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:174
+msgid "No. You and the Dragon-child can enter. The human cannot."
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:195
+msgid "Lorendor, Erinna, Raizr? Why are you still on this side of the bridge?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:199
+msgid "Where are the others?"
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:203
+msgid "The others got another mission. They are taking the main army to Wesmere, What happened?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:207
+msgid "We are on our own then. Gatekeeper is preventing Erinna from going in."
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:211
+msgid "Gatekeeper? What happened?"
+msgstr ""
+
+#. [message]: speaker=guardian
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:215
+msgid "There is something bad inside the human which can not be allowed entry. I might be forced to close the gate."
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:219
+msgid "Something is not right. Erinna is harmless. The Gatekeeper also is never wrong. Erinna, would you mind if we probe your mana?"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:223
+msgid "Fine, you can check."
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:227
+msgid "Thank you. I am going to bring a white magic expert."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:233
+msgid "Move $portalmage.name inside (to (11,1))"
+msgstr ""
+
+#. [message]: speaker=lightmage
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:286
+msgid "Highmage $portalmage.name? Did something happen?"
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:290
+msgid "It's an emergency, $lightmage.name. Come with me please."
+msgstr ""
+
+#. [message]: speaker=lightmage
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:294
+msgid "Certainly. (To the students) Your class is over. Please revise."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:300
+msgid "Move $lightmage.name and $portalmage.name close to Erinna."
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:338
+msgid "$lightmage.name started chanting. As it filled their ears and mind, a beam of light appeared around Erinna."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:342
+msgid "(Screams)"
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:353
+msgid "Slowly, slowly, a black miasma spread around Erinna's body and her eyes turned black as coal. Everyone was shocked."
+msgstr ""
+
+#. [modify_unit]
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:360
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:571
+msgid "Erinna (Possessed)"
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:369
+msgid "Gatekeeper, $lightmage.name, keep her contained. Don't let her move."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:373
+msgid "(Distorted voice) Fools! Do you think it is so easy?"
+msgstr ""
+
+#. [message]: speaker=guardian
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:385
+msgid "Dangerous. I have to close the gate now."
+msgstr ""
+
+#. [message]: speaker=lightmage
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:413
+msgid "No! Now the other magi will be stuck inside."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:417
+msgid "AT least the students and other civilians safe. Let us hold Erinna for now. We can deal with this."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:421
+msgid "You can't hold me forever!"
+msgstr ""
+
+#. [message]: speaker=lightmage
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:433
+msgid "(Screams) Ahhh!"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:447
+msgid "Finally! I can move. Time to deal with the pests."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:492
+msgid "No other way then. Let's defeat her. (She's still human, so she can faint.)"
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:497
+msgid "Your escorts haven't arrived yet. Let the guardsmen posted here help you."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:502
+msgid "Thanks!"
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:515
+msgid "Defeat Erinna."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:519
+msgid "Death of Lorendor, Raizr, $portalmage.name or $lightmage.name"
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:523
+msgid "The Gatekeeper is defeated."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:580
+msgid "Impossible! Why are you so cruel to your disciple?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:585
+msgid "I am not. (Hits Erinna on the head with the hilt of the sword.)"
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:597
+msgid "Well done, Lorendor. In a human body, the possessor can also faint. Now we just have to remove the spirit."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:602
+msgid "I still don't understand. I never noticed anything. No abnormal fluctuations in her mana."
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:607
+msgid "I agree. Probably a dangerous spirit that came out from the Portal. It's ability to stay undetected alone speaks volumes."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:612
+msgid "We must deal with it before Erinna wakes up."
+msgstr ""
+
+#. [message]: speaker=lightmage
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:617
+msgid "I know a holy temple in the Northern Mountains. I learned a lot of my craft there. If somebody could remove such a dangerously strong evil spirit, it would be them. But it will take a couple of days to go there even if we use Gryphons."
+msgstr ""
+
+#. [message]: speaker=portalmage
+#: Frost_Mage/scenarios/07_meeting_the_council.cfg:621
+msgid "I can teleport you there, but it will take a significant amount of my mana. But I am willing to do it. Pack your belongings."
+msgstr ""
+
+#. [side]: type=Mage of Light, id=headpriest, gender=male
+#. [scenario]: id=08_the_temple
+#: Frost_Mage/scenarios/08_the_temple.cfg:38
+#: Frost_Mage/scenarios/08_the_temple.cfg:5
+msgid "The Temple"
+msgstr ""
+
+#. [part]
+#: Frost_Mage/scenarios/08_the_temple.cfg:16
+msgid "Deciding they were running out of time, $portalmage.name decided to teleport Lorendor, $lightmage.name and the possessed Erinna, along with some veteran soldiers, to Northern Mountains at the cost of most of his magic energy. Their destination was an ancient temple there where $lightmage.name had previously made a visit."
+msgstr ""
+
+#. [side]: type=Ice Dragon, id=ice_dragon
+#: Frost_Mage/scenarios/08_the_temple.cfg:53
+msgid "Dragon"
+msgstr ""
+
+#. [side]
+#: Frost_Mage/scenarios/08_the_temple.cfg:103
+msgid "Dungeon Guardian"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/08_the_temple.cfg:189
+msgid "The Ice Sword, Strakos. Should $unit.name pick it up?"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/08_the_temple.cfg:190
+msgid "Strakos^Pick it up"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/08_the_temple.cfg:191
+msgid "Strakos^Leave it for others"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/08_the_temple.cfg:192
+#: Frost_Mage/scenarios/09_pursuit.cfg:142
+#: Frost_Mage/scenarios/09_pursuit.cfg:189
+#: Frost_Mage/scenarios/09_pursuit.cfg:237
+msgid "Only experts (level 3) can pick it up!"
+msgstr ""
+
+#. [object]: id=frost_sword
+#: Frost_Mage/scenarios/08_the_temple.cfg:196
+msgid "Strakos"
+msgstr ""
+
+#. [object]: id=frost_sword
+#: Frost_Mage/scenarios/08_the_temple.cfg:199
+msgid "Strakos, the legendary sword of ice, found in the hearts of the Northen Mountains."
+msgstr ""
+
+#. [effect]: type=cold
+#: Frost_Mage/scenarios/08_the_temple.cfg:213
+msgid "Frost Strike"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/08_the_temple.cfg:249
+msgid "How far away is the temple?"
+msgstr ""
+
+#. [message]: speaker=lightmage
+#: Frost_Mage/scenarios/08_the_temple.cfg:254
+msgid "On a mountain, where the path branches. It is close."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/08_the_temple.cfg:259
+msgid "Fine. Let's be prepared in case we run into trouble."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/08_the_temple.cfg:264
+msgid "Find the temple."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/08_the_temple.cfg:268
+#: Frost_Mage/scenarios/08_the_temple.cfg:312
+#: Frost_Mage/scenarios/08_the_temple.cfg:440
+#: Frost_Mage/scenarios/08_the_temple.cfg:588
+#: Frost_Mage/scenarios/08_the_temple.cfg:654
+#: Frost_Mage/scenarios/08_the_temple.cfg:729
+msgid "Death of Lorendor or $lightmage.name."
+msgstr ""
+
+#. [note]
+#: Frost_Mage/scenarios/08_the_temple.cfg:279
+#: Frost_Mage/scenarios/08_the_temple.cfg:323
+#: Frost_Mage/scenarios/08_the_temple.cfg:451
+#: Frost_Mage/scenarios/08_the_temple.cfg:602
+#: Frost_Mage/scenarios/08_the_temple.cfg:668
+#: Frost_Mage/scenarios/08_the_temple.cfg:740
+msgid "This is a long scenario with multiple quests."
+msgstr ""
+
+#. [message]: speaker=unit
+#: Frost_Mage/scenarios/08_the_temple.cfg:298
+msgid "The Temple's entrance is here! But it is blocked somehow. I cannot go in."
+msgstr ""
+
+#. [message]: speaker=lightmage
+#: Frost_Mage/scenarios/08_the_temple.cfg:303
+msgid "There is a magical barrier protecting the Temple. Let me go there."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/08_the_temple.cfg:308
+msgid "Move $lightmage.name to the Temple's entrance."
+msgstr ""
+
+#. [message]: speaker=lightmage
+#: Frost_Mage/scenarios/08_the_temple.cfg:343
+msgid "High Priest! Please let us come in. It is me, $lightmage.name, your student!"
+msgstr ""
+
+#. [message]: speaker=headpriest
+#: Frost_Mage/scenarios/08_the_temple.cfg:348
+msgid "$lightmage.name? Why are you here?"
+msgstr ""
+
+#. [message]: speaker=headpriest
+#: Frost_Mage/scenarios/08_the_temple.cfg:365
+msgid "Wait! That girl is possessed!"
+msgstr ""
+
+#. [message]: speaker=lightmage
+#: Frost_Mage/scenarios/08_the_temple.cfg:370
+msgid "That is why we are here, teacher. Nobody but the magi here could possibly help her."
+msgstr ""
+
+#. [message]: speaker=headpriest
+#: Frost_Mage/scenarios/08_the_temple.cfg:375
+msgid "You do not understand the strength of this spirit. It is no ordinary Spectre. It has probably waited and schemed thousands of years just to get back. I cannot assure the girl's, and everyones safety once the girl wakes up. I am ashamed to say this as a White Mage, but chances of the girl surviving is very slim. You better get rid of her before she wakes up."
+msgstr ""
+
+#. [message]: speaker=lightmage
+#: Frost_Mage/scenarios/08_the_temple.cfg:380
+msgid "No! Teacher, how can you say such harsh words!"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/08_the_temple.cfg:385
+msgid "Anything else you can suggest? I am afraid we cannot take that step."
+msgstr ""
+
+#. [message]: speaker=ice_dragon
+#: Frost_Mage/scenarios/08_the_temple.cfg:390
+msgid "(Roars)"
+msgstr ""
+
+#. [message]: speaker=headpriest
+#: Frost_Mage/scenarios/08_the_temple.cfg:395
+msgid "Oh no! Do what you want, I am going."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#. [then]
+#: Frost_Mage/scenarios/08_the_temple.cfg:410
+#: Frost_Mage/scenarios/09_pursuit.cfg:819
+msgid "What was that?"
+msgstr ""
+
+#. [message]: id=ice_dragon
+#: Frost_Mage/scenarios/08_the_temple.cfg:421
+msgid "That old fool! He runs faster than the sewer rats!"
+msgstr ""
+
+#. [message]: id=ice_dragon
+#: Frost_Mage/scenarios/08_the_temple.cfg:426
+msgid "What's this? He also started abandoning people? Very well, suffer my wrath!"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/08_the_temple.cfg:431
+msgid "To Arms, everyone! En Garde!"
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/08_the_temple.cfg:436
+msgid "Defeat the Dragon."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/08_the_temple.cfg:481
+msgid "Whoa! What's this?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/08_the_temple.cfg:494
+msgid "Good job, $unit.name. You found the mechanism that opens the path. Now we can go forward."
+msgstr ""
+
+#. [message]: speaker=ice_dragon
+#: Frost_Mage/scenarios/08_the_temple.cfg:512
+msgid "Well done. You have successfully completed your quest."
+msgstr ""
+
+#. [message]: speaker=ice_dragon
+#: Frost_Mage/scenarios/08_the_temple.cfg:517
+msgid "Since you have done it so well, I shall give you something."
+msgstr ""
+
+#. [message]: speaker=ice_dragon
+#: Frost_Mage/scenarios/08_the_temple.cfg:527
+msgid "Take this book. It has a spell that will allow you to remove the spirit from the girl's body. But beware, it will only work if the girl's spirit has enough strength left to fight."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/08_the_temple.cfg:532
+msgid "Thank you. $lightmage.name, are you ready?"
+msgstr ""
+
+#. [message]: speaker=lightmage
+#: Frost_Mage/scenarios/08_the_temple.cfg:537
+msgid "As ready as ever. Give me the book, please."
+msgstr ""
+
+#. [message]: speaker=headpriest
+#: Frost_Mage/scenarios/08_the_temple.cfg:544
+msgid "I can't believe it! Not only they stole the ice sword, they allied themselves with the dragon! This cannot go unpunished! Call the messengers. I have important messages to send."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/08_the_temple.cfg:570
+msgid "Excellent, $unit.name! Now that we have the item, let's go to the Dragon."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/08_the_temple.cfg:584
+msgid "Move the unit with Strakos to meet the dragon (7,6)."
+msgstr ""
+
+#. [note]
+#: Frost_Mage/scenarios/08_the_temple.cfg:599
+#: Frost_Mage/scenarios/08_the_temple.cfg:665
+msgid "Right click on the unit > Unequip to drop the item."
+msgstr ""
+
+#. [message]: speaker=$eq_unit_id
+#: Frost_Mage/scenarios/08_the_temple.cfg:624
+msgid "The Dragon should be somewhere around."
+msgstr ""
+
+#. [message]: speaker=ice_dragon
+#: Frost_Mage/scenarios/08_the_temple.cfg:636
+msgid "You found it?"
+msgstr ""
+
+#. [message]: speaker=$eq_unit_id
+#: Frost_Mage/scenarios/08_the_temple.cfg:641
+msgid "Yes, Great Dragon. Here it is."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/08_the_temple.cfg:650
+msgid "Drop the item."
+msgstr ""
+
+#. [message]: speaker=ice_dragon
+#: Frost_Mage/scenarios/08_the_temple.cfg:688
+msgid "Well fought, warriors."
+msgstr ""
+
+#. [message]: speaker=ice_dragon
+#: Frost_Mage/scenarios/08_the_temple.cfg:695
+msgid "So I am willing to call a truce."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/08_the_temple.cfg:700
+msgid "We do not want to fight you, either, but we cannot let you harm the White Magi. What are your terms?"
+msgstr ""
+
+#. [message]: speaker=ice_dragon
+#: Frost_Mage/scenarios/08_the_temple.cfg:705
+msgid "Bring me my property which the Priest has stolen. If you get it back, I can forgive the priest for now, but he dare not disturb me again."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/08_the_temple.cfg:710
+msgid "What is it? Where can we find it?"
+msgstr ""
+
+#. [message]: speaker=ice_dragon
+#: Frost_Mage/scenarios/08_the_temple.cfg:715
+msgid "It is hidden somewhere in the northeast. Probably somewhere under the mountain where I cannot go. After you find it, come meet me at the northwestern mountains."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/08_the_temple.cfg:720
+msgid "Accepted."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/08_the_temple.cfg:725
+msgid "Find out the magic item in the northeast."
+msgstr ""
+
+#. [note]
+#: Frost_Mage/scenarios/08_the_temple.cfg:744
+msgid "Only level 3 units can pickup the item."
+msgstr ""
+
+#. [message]: speaker=unit
+#: Frost_Mage/scenarios/08_the_temple.cfg:785
+msgid "There's something here! Looks like a tunnel entrance."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/08_the_temple.cfg:790
+msgid "Explore inside, but be careful. Dungeons usually have various protection mechanisms."
+msgstr ""
+
+#. [message]: speaker=unit
+#: Frost_Mage/scenarios/08_the_temple.cfg:801
+msgid "Yes, sir!"
+msgstr ""
+
+#. [message]: speaker=unit
+#: Frost_Mage/scenarios/08_the_temple.cfg:812
+msgid "Yes, my lord!"
+msgstr ""
+
+#. [message]: speaker=unit
+#: Frost_Mage/scenarios/08_the_temple.cfg:824
+msgid "Yes, warchief!"
+msgstr ""
+
+#. [message]: speaker=unit
+#: Frost_Mage/scenarios/08_the_temple.cfg:833
+msgid "Screeee!"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/08_the_temple.cfg:837
+msgid "Looks like he found something. We have to go and check it."
+msgstr ""
+
+#. [scenario]: id=09_pursuit
+#: Frost_Mage/scenarios/09_pursuit.cfg:8
+msgid "Pursuit"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:139
+msgid "The Staff of Lightning, Arzenth. Should $unit.name pick it up?"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:140
+msgid "Arzenth^Pick it up"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:141
+msgid "Arzenth^Leave it for others"
+msgstr ""
+
+#. [object]: id=arzenth
+#: Frost_Mage/scenarios/09_pursuit.cfg:146
+msgid "Arzenth"
+msgstr ""
+
+#. [object]: id=arzenth
+#: Frost_Mage/scenarios/09_pursuit.cfg:149
+msgid "The Staff of Lightning, Arzenth."
+msgstr ""
+
+#. [effect]: type=electric
+#: Frost_Mage/scenarios/09_pursuit.cfg:163
+msgid "Lighting Strike"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:186
+msgid "The Faerie Bow, Eth-Luril. Should $unit.name pick it up?"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:187
+msgid "Eth-Luril^Pick it up"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:188
+msgid "Eth-Luril^Leave it for others"
+msgstr ""
+
+#. [object]: id=eth_luril
+#: Frost_Mage/scenarios/09_pursuit.cfg:193
+msgid "Eth-Luril"
+msgstr ""
+
+#. [object]: id=eth_luril
+#: Frost_Mage/scenarios/09_pursuit.cfg:196
+msgid "The Faerie Bow, Eth-Luril."
+msgstr ""
+
+#. [effect]: type=natural
+#: Frost_Mage/scenarios/09_pursuit.cfg:210
+msgid "Faerie Arrow"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:234
+msgid "The Spear of Light. Should $unit.name pick it up?"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:235
+msgid "lightspear^Pick it up"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:236
+msgid "lightspear^Leave it for others"
+msgstr ""
+
+#. [object]: id=lightspear
+#: Frost_Mage/scenarios/09_pursuit.cfg:241
+msgid "Spear of Light"
+msgstr ""
+
+#. [object]: id=lightspear
+#: Frost_Mage/scenarios/09_pursuit.cfg:244
+msgid "The Spear of Light."
+msgstr ""
+
+#. [effect]: type=arcane
+#: Frost_Mage/scenarios/09_pursuit.cfg:257
+msgid "Slash of Light"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/09_pursuit.cfg:330
+msgid "$lightmage.name, did you manage to understand the expulsion spell yet? $erinna.name's condition is getting worse."
+msgstr ""
+
+#. [message]: speaker=lightmage
+#: Frost_Mage/scenarios/09_pursuit.cfg:335
+msgid "I did understand the spell, but I believe it can only be cast at a specific time. Thankfully, this book has another spell which can keep the spirit inside $erinna.name dormant for at least one more day. But take care, once I cast the expulsion spell, neither me nor $erinna.name will be able to move for a couple of hours from the place of the incantation."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/09_pursuit.cfg:339
+msgid "That is fine, we do have our veteran soldiers with us. They would be able to protect $erinna.name and you for a while. But we might not be able to get any new recruits here."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/09_pursuit.cfg:343
+msgid "Let us look around. Maybe we can find a safer place."
+msgstr ""
+
+#. [message]: speaker=lightmage
+#: Frost_Mage/scenarios/09_pursuit.cfg:347
+msgid "I will cast the dormancy spell on $erinna.name first. This will allow her to wake up and behave normally, until the time to cast the expulsion spell is met."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/09_pursuit.cfg:358
+msgid "Wh..where am I?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/09_pursuit.cfg:363
+msgid "Northern mountains."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/09_pursuit.cfg:368
+msgid "When did we come here? I have ... no memories from the time $lightmage.name tested me. I ... don't feel right. Did something happen?"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/09_pursuit.cfg:373
+msgid "(Notices the black aura) What is this!"
+msgstr ""
+
+#. [message]: speaker=lightmage
+#: Frost_Mage/scenarios/09_pursuit.cfg:378
+msgid "You were possed by a dangerous spirit. It shows the spirit is still inside, but is dormant. I'll heal you. Then we can start moving, and you can get the details from $lorendor.name."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/09_pursuit.cfg:383
+msgid "$erinna.name, I think that aura may also call something bad at night. We must be careful. It also nullifies $lightmage.name's holy illumination when you are close to her."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/09_pursuit.cfg:391
+msgid "Recall units, then explore around. You can recall around $lorendor.name's starting position (14,3)."
+msgstr ""
+
+#. [note]
+#: Frost_Mage/scenarios/09_pursuit.cfg:396
+#: Frost_Mage/scenarios/09_pursuit.cfg:512
+msgid "Keep is temporary and will be removed on turn 3."
+msgstr ""
+
+#. [note]
+#: Frost_Mage/scenarios/09_pursuit.cfg:399
+#: Frost_Mage/scenarios/09_pursuit.cfg:516
+#: Frost_Mage/scenarios/09_pursuit.cfg:603
+msgid "The dark aura around $erinna.name calls ghosts and other creatures at night. Careful!"
+msgstr ""
+
+#. [note]
+#: Frost_Mage/scenarios/09_pursuit.cfg:403
+#: Frost_Mage/scenarios/09_pursuit.cfg:607
+msgid "$lightmage.name will cast the spell at turn 7. She and $erinna.name will not be able to move for 3 turns."
+msgstr ""
+
+#. [unit]: type=Human Lady, id=aethyra, gender=female
+#: Frost_Mage/scenarios/09_pursuit.cfg:416
+msgid "Lady Aethyra"
+msgstr ""
+
+#. [unit]: type=Human Young Lord, id=lumis, gender=male
+#: Frost_Mage/scenarios/09_pursuit.cfg:432
+msgid "Lumis"
+msgstr ""
+
+#. [message]: speaker=second_unit
+#: Frost_Mage/scenarios/09_pursuit.cfg:466
+msgid "Who are they?"
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/09_pursuit.cfg:470
+msgid "Looks like pilgrims who are returning from a visit to the temple."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:473
+msgid "Kruk"
+msgstr ""
+
+#. [message]: speaker=kruk
+#: Frost_Mage/scenarios/09_pursuit.cfg:477
+msgid "Rich humans! Lads, get rid of them and their money is ours!"
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/09_pursuit.cfg:494
+msgid "They are being attacked! Hurry."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/09_pursuit.cfg:507
+msgid "Defeat the orcs and rescue the humans."
+msgstr ""
+
+#. [note]
+#: Frost_Mage/scenarios/09_pursuit.cfg:520
+msgid "$lightmage.name will cast the spell at turn 7. She and $erinna.name will not be able to move for 5 turns."
+msgstr ""
+
+#. [message]: speaker=aethyra
+#: Frost_Mage/scenarios/09_pursuit.cfg:542
+msgid "Elvenfolk, we are eternally grateful for your timely assistance. Otherwise we might not have seen the next sunrise."
+msgstr ""
+
+#. [message]: speaker=aethyra
+#: Frost_Mage/scenarios/09_pursuit.cfg:547
+msgid "My name is $aethyra.name, and this is my younger brother, $lumis.name."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/09_pursuit.cfg:552
+msgid "(Introduces others) and I am $erinna.name."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/09_pursuit.cfg:557
+msgid "Please, don't mention it. You are not in our debt."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/09_pursuit.cfg:562
+msgid "I agree. Why are you travelling alone? This path is full of perils."
+msgstr ""
+
+#. [message]: speaker=lumis
+#: Frost_Mage/scenarios/09_pursuit.cfg:567
+msgid "We had escorts, but they perished on the way back from the temple. We survived somehow."
+msgstr ""
+
+#. [message]: speaker=erinna
+#: Frost_Mage/scenarios/09_pursuit.cfg:572
+msgid "Let them come with us, at least until the next settlement."
+msgstr ""
+
+#. [message]: speaker=lightmage
+#: Frost_Mage/scenarios/09_pursuit.cfg:577
+msgid "I wholeheartedly support this. I will tend to their wounds."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/09_pursuit.cfg:582
+msgid "Certainly. We cannot leave them here."
+msgstr ""
+
+#. [message]: speaker=aethyra
+#: Frost_Mage/scenarios/09_pursuit.cfg:587
+msgid "Thank you! You are a gift from God."
+msgstr ""
+
+#. [message]: speaker=lorendor
+#: Frost_Mage/scenarios/09_pursuit.cfg:592
+msgid "I think these orcs were just lackeys. We need to defeat the leader. Otherwise they will just keep harming innocent strangers."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:623
+msgid "The spell needs to be cast now. We will need to be protected for half a day."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:624
+msgid "We will form a defensive perimeter so that no harm will come to you."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:625
+msgid "Thank you. $erinna.name, are you prepared?"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:626
+msgid "Yes, cast the spell."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/09_pursuit.cfg:652
+msgid "Protect $erinna.name and $lightmage.name for 3 turns."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/09_pursuit.cfg:657
+msgid "Death of Lorendor, $lightmage.name or $erinna.name."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:695
+msgid "Thank heavens! I am finally free of that miasma."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:714
+msgid "(Unearthly scream)"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:752
+msgid "So that was the spirit possessing $erinna.name!"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:753
+msgid "That spirit... we need to stop it... otherwise it will destroy everything!"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:773
+msgid "No... $lightmage.name fainted! The great spell has taken its toll."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:774
+msgid "Why did everything has to go awry like this? I can't believe it!"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:775
+msgid "(teary) I am sorry, everyone. You have to suffer because of me."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:777
+msgid "Don't blame yourself. $lightmage.name did it because she wanted to. She will recover. But you must not break down now. We have a hard battle in front of us."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:779
+msgid "Yes, he is right. Please don't blame yourself, $erinna.name. You must stay strong, for her sake at least."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:781
+msgid "Thank ... you!"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:782
+msgid "I will stop this spirit myself!"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:784
+msgid "The Spirit seems to be extremely dangerous... and angry! Can we really stop it?"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:785
+msgid "The spell must have weakened it somehow. We need to exploit that."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:786
+msgid "I had suspicions about it, but I think this place has hidden magical objects that might help us. When $lightmage.name cast that powerful spell, they responded to the magic. I felt the echo."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:787
+msgid "I can not tell their exact location, but I feel three of them, towards north-east, north-west and south-west."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:788
+msgid "Those magic items might be of great help. We need to find them immediately."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/09_pursuit.cfg:793
+msgid "Defeat the Spirit and any remaining enemy leaders (except Knights)."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/09_pursuit.cfg:798
+msgid "Death of $erinna.name, $lorendor.name, $aethyra.name or $lumis.name."
+msgstr ""
+
+#. [note]
+#: Frost_Mage/scenarios/09_pursuit.cfg:803
+#: Frost_Mage/scenarios/09_pursuit.cfg:1094
+msgid "Search around the map. You might be able to find something to help you."
+msgstr ""
+
+#. [then]
+#: Frost_Mage/scenarios/09_pursuit.cfg:820
+msgid "Doesn't feel good. We should investigate this."
+msgstr ""
+
+#. [then]
+#: Frost_Mage/scenarios/09_pursuit.cfg:821
+msgid "Agreed. You go scout what's causing this, I'll deal with the situation here."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/09_pursuit.cfg:826
+msgid "Find out what happened and who caused it."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/09_pursuit.cfg:831
+msgid "Death of $gknight.name and $uncle.name"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:852
+msgid "Finally, we are free of that pestilence!"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:853
+msgid "(Everyone shouts in triumph.)"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:857
+msgid "Now that we are free of that Spirit, let us talk, my lords and ladies."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:858
+msgid "Definitely. What is it that bothers you? Perhaps the necromancer you were talking about?"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:859
+msgid "I don't think there was a necromancer. Our report was wrong. But you do have an ancient book of white magic in your posession, correct? We have been informed that it was stolen. Now that Lady $erinna.name is purified, would you like to return it to the Head Priest of the temple in the Northern Mountains?"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:860
+msgid "I am afraid that book wasn't originally his to begin with. It was the Ice Dragon's property."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:861
+msgid "So you did ally yourself with a vile beast! Not only that, you also stole the Magic Sword from its secure vault and the book of White Magic."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:862
+msgid "You have been misinformed. I advise you investigate the truth of the situation before actually accusing us."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:863
+msgid "Sir $gknight.name, it's best to settle the matter peacefully. My lord $lorendor.name, may I ask all of you to come to Glamdrol and have the matter settled before the city council? I think the matter has been reported to Weldyn by now."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:864
+msgid "$uncle.name, Do you recognize me and my brother?"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:865
+msgid "Lord Arvon's son and daughter? What is your position in this, my lord and lady?"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:866
+msgid "We will support $erinna.name. You can count on that."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:867
+msgid "Sir $gknight.name, we will come with you, if only to settle the matter without bloodshed. However, you have already seen our might. Know that it is but a small fraction of the forces I can muster. I do not fear Weldyn, but I wish for justice to be withheld."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:868
+msgid "Thank you, my lord. I apologize for my earlier behaviour. Let us leave this wicked place now."
+msgstr ""
+
+#. [then]
+#: Frost_Mage/scenarios/09_pursuit.cfg:903
+msgid "A dark creature appears ..."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/09_pursuit.cfg:1025
+msgid "Find a keep, then defeat enemy leaders."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/09_pursuit.cfg:1029
+msgid "Death of $gknight.name or $uncle.name."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:1047
+msgid "We've found them!"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:1051
+msgid "Why does that lady resembles my niece Erinna so much?"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:1061
+msgid "Do you know what was that? It almost felt like an Earthquake!"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:1062
+msgid "You must have felt the aftershock of the spell. We were trying to remove an evil spirit from our friend Erinna's body. We succeeded, but the Spirit fled and is now trying to attack everyone in its sight."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:1063
+msgid "So it is my niece Erinna after all."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:1064
+msgid "What! Uncle, is that you?"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:1065
+msgid "Yes, it is your old uncle!"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:1066
+msgid "Good news for you, $uncle.name, but for now we should focus on more pressing matters. My lords and ladies, do you know of any necromancer in this area?"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:1067
+msgid "Apart from the evil spirit, no. But it is far more dangerous than any necromancer."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/09_pursuit.cfg:1068
+msgid "Very well, I propose that we work together to defeat this enemy. After that, we would like to discuss something with you."
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/09_pursuit.cfg:1079
+msgid "Defeat the Spirit and any remaining enemy leader."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/09_pursuit.cfg:1084
+msgid "Death of $erinna.name, $lorendor.name, $aethyra.name, $lumis.name."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/09_pursuit.cfg:1089
+#: Frost_Mage/scenarios/10_the_city.cfg:157
+msgid "Death of $gknight.name, $uncle.name."
+msgstr ""
+
+#. [scenario]: id=10_the_city
+#: Frost_Mage/scenarios/10_the_city.cfg:8
+msgid "The City"
+msgstr ""
+
+#. [objective]: condition=win
+#: Frost_Mage/scenarios/10_the_city.cfg:149
+msgid "Make sure Aethyra and Lumis reach the manor (38, 16) safely."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/10_the_city.cfg:153
+msgid "Death of Lorendor, $lightmage.name, Erinna or Raizr."
+msgstr ""
+
+#. [objective]: condition=lose
+#: Frost_Mage/scenarios/10_the_city.cfg:161
+msgid "Death of Aethyra or Lumis."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/10_the_city.cfg:188
+msgid "We are almost there. You will be able to see the lights of the city soon."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/10_the_city.cfg:189
+msgid "The city is so big!"
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/10_the_city.cfg:190
+msgid "Once the charges are lifted, I'll personally show you around."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/10_the_city.cfg:191
+msgid "I am really angry with you. Why didn't you visit? It has been years since I last saw you."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/10_the_city.cfg:192
+msgid "I am so sorry. I kept getting faraway assignments."
+msgstr ""
+
+#. [event]
+#: Frost_Mage/scenarios/10_the_city.cfg:193
+msgid "Our achievement this time was great. Everyone will get a vacation. More to that, your niece is already here. You will have more time for sightseeing."
+msgstr ""
+
+#. [unit_type]: gender=male, id=High Lord, race=human
+#. [unit_type]: gender=male, id=Human Lord, race=human
+#: Frost_Mage/units/human-loyalists/Human_High_Lord.cfg:10
+#: Frost_Mage/units/human-loyalists/Human_Lord.cfg:10
+msgid "Nobleman are trained in both fighting and politics from their birth, and so have developed both skills to a very high degree."
+msgstr ""
+
+#. [unit_type]: gender=male, id=High Lord, race=human
+#: Frost_Mage/units/human-loyalists/Human_High_Lord.cfg:19
+msgid "High Lord"
+msgstr ""
+
+#. [attack]: type=blade
+#: Frost_Mage/units/human-loyalists/Human_High_Lord.cfg:29
+#: Frost_Mage/units/human-loyalists/Human_Lady.cfg:35
+#: Frost_Mage/units/human-loyalists/Human_Lord.cfg:29
+msgid "saber"
+msgstr ""
+
+#. [unit_type]: gender=female, id=Human Lady, race=human
+#: Frost_Mage/units/human-loyalists/Human_Lady.cfg:10
+msgid "Noblewomen usually rely on their wit and political acumen to fight battles, instead of usual weaponry. Though experienced noblewomen almost always have some other means of defending if needed. An unwary bandit might still face a very bad day."
+msgstr ""
+
+#. [unit_type]: gender=female, id=Human Lady, race=human
+#: Frost_Mage/units/human-loyalists/Human_Lady.cfg:19
+msgid "Human Lady"
+msgstr ""
+
+#. [attack]: type=fire
+#: Frost_Mage/units/human-loyalists/Human_Lady.cfg:44
+msgid "weak fireball"
+msgstr ""
+
+#. [variation]
+#: Frost_Mage/units/human-loyalists/Human_Lady.cfg:71
+msgid "Lady Mage"
+msgstr ""
+
+#. [variation]
+#: Frost_Mage/units/human-loyalists/Human_Lady.cfg:79
+msgid "Swordswoman"
+msgstr ""
+
+#. [unit_type]: gender=male, id=Human Lord, race=human
+#: Frost_Mage/units/human-loyalists/Human_Lord.cfg:19
+msgid "Lord"
+msgstr ""
+
+#. [unit_type]: gender=male, id=Human Young Lord, race=human
+#: Frost_Mage/units/human-loyalists/Human_Young_Lord.cfg:9
+msgid "Sons of lords who have just started their weapons training. Slightly simple minded than their fathers and uncles, their sense for court intrigue isn't as good yet. Used to having their needs taken care of from childhood, their fighting skill and endurance are less than experienced soldiers."
+msgstr ""
+
+#. [unit_type]: gender=male, id=Human Young Lord, race=human
+#: Frost_Mage/units/human-loyalists/Human_Young_Lord.cfg:19
+msgid "Young Lord"
+msgstr ""
+
+#. [attack]: type=blade
+#: Frost_Mage/units/human-loyalists/Human_Young_Lord.cfg:26
+msgid "sword"
+msgstr ""
+
