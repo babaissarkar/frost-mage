@@ -14,7 +14,6 @@ end
 function show_stats_dialog(item_img, details_obj, btn1_text, btn2_text)
     local preshow = function(dialog)
         local details = dialog:find('details')
-        --details.label = format_object(details_obj[1][2])
         details.label = format_object(details_obj)
         local image = dialog:find('image')
         image.label = item_img.."~BLIT(misc/achievement-frames/frame-9-red.png)"
@@ -31,21 +30,17 @@ function show_stats_dialog(item_img, details_obj, btn1_text, btn2_text)
     return gui.show_dialog(wml.get_child(wml.load("~add-ons/Frost_Mage/gui/item_stats.cfg"), "resolution"), preshow, function() end)
 end
 
--- local inventory_drop = dialog:find("inv_drop")
---                     inventory_drop.on_button_click = function()
---                         local node_id = storage_list.selected_item_path[1]
---                         local subnode_id = storage_list.selected_item_path[2]
---                         if node_id == 1 then
---                             wnode:remove_items_at(subnode_id, 1)
---                             wml.variables['drop'] = true
---                         elseif node_id = 2 then
---                             anode:remove_items_at(subnode_id, 1)
---                             wml.variables['drop'] = true
---                         elseif node_id = 3 then
---                             tnode:remove_items_at(subnode_id, 1)
---                             wml.variables['drop'] = true
---                         elseif node_id = 4 then
---                             amnode:remove_items_at(subnode_id, 1)
---                             wml.variables['drop'] = true
---                         end
---                     end
+-- custom tag for placing items in a map
+function wesnoth.wml_actions.put_item(cfg)
+    wesnoth.interface.add_item_image(cfg.x, cfg.y, cfg.image)
+    gui.alert(wml.tostring(cfg))
+    wesnoth.game_events.add{
+        name = 'moveto',
+        id = cfg.id..'_pickup_event',
+        first_time_only = false,
+        filter = {x = cfg.x, y = cfg.y, race = cfg.race, level = cfg.level},
+        action = function()
+            gui.alert('hello')
+        end
+    }
+end
