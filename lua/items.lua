@@ -33,14 +33,16 @@ end
 -- custom tag for placing items in a map
 function wesnoth.wml_actions.put_item(cfg)
     wesnoth.interface.add_item_image(cfg.x, cfg.y, cfg.image)
-    gui.alert(wml.tostring(cfg))
+    --gui.alert(wesnoth.as_text(wml.get_child(wml.parsed(cfg), "filter")))
+    --filter = {x = cfg.x, y = cfg.y, race = cfg.race, level = cfg.level},
+    child, _ = wml.get_child(wml.parsed(cfg), "filter")
     wesnoth.game_events.add{
         name = 'moveto',
         id = cfg.id..'_pickup_event',
         first_time_only = false,
-        filter = {x = cfg.x, y = cfg.y, race = cfg.race, level = cfg.level},
+        filter = child,
         action = function()
-            gui.alert('hello')
+            gui.alert(wesnoth.as_text(child))
         end
     }
 end
