@@ -36,7 +36,7 @@ function show_stats_dialog(item_img, details_obj, btn1_text, btn2_text)
         end
     end
     
-    return gui.show_dialog(wml.get_child(wml.load("~add-ons/WISh/gui/item_stats.cfg"), "resolution"), preshow, function() end)
+    return gui.show_dialog(wml.get_child(wml.load("~add-ons/Frost_Mage/gui/item_stats.cfg"), "resolution"), preshow, function() end)
 end
 
 -- get item from storage
@@ -184,7 +184,7 @@ end
 
 -- Show the inventory
 function show_inventory()
-    gui.show_dialog(wml.get_child(wml.load("~add-ons/WISh/gui/inventory.cfg"), "resolution"), inventory_init, function() end)
+    gui.show_dialog(wml.get_child(wml.load("~add-ons/Frost_Mage/gui/inventory.cfg"), "resolution"), inventory_init, function() end)
 end
 
 ----------------------------------------------------------
