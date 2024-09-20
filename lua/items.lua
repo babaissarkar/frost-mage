@@ -5,9 +5,20 @@ ITEM_TYPES[0] = {"weapon", "Weapon", "misc/achievement-frames/frame-6-royal.png"
 ITEM_TYPES[1] = {"armor", "Armor", "misc/achievement-frames/frame-2-orange.png"}
 ITEM_TYPES[2] = {"trinket", "Trinket", "misc/achievement-frames/frame-4-sky.png"}
 ITEM_TYPES[3] = {"amulet", "Amulet", "misc/achievement-frames/frame-3-jade.png"}
+
+-- Equip trait
+EQUIP_TRAIT = {
+    id = "equipped",
+    name = "equipped",
+    description = "Item: "
+}
+
+-- Item locked message
+LOCK_TITLE = "<span face='OldaniaADFStd' color='#ff00ff'><big>Can't Remove!</big></span>"
+LOCK_MSG = "This item is <i>locked</i> and cannot be removed normally!"
 ---------------------------------------------------------------
 
--- given object, return a string nicely formatted with pango markup describing it
+-- given object, return a formatted string describing it
 function format_object(object)
     local formatted_text
     formatted_text =
@@ -15,17 +26,32 @@ function format_object(object)
     ..object['name']
     .."</big></span>\n<i>"
     ..object['description']
-    .."</i>"
+    .."</i>\n"
+    
+    if (object['gold_value'] ~= nil) then
+        formatted_text =
+        formatted_text
+        .."Value: "
+        ..object['gold_value']
+        .." gold"
+    end
     return formatted_text
 end
 
 -- show the stats of a given item object in a gui
-function show_stats_dialog(item_img, details_obj, btn1_text, btn2_text)
+function show_stats_dialog(details_obj, btn1_text, btn2_text, btn3_text, show_sell)
     local preshow = function(dialog)
+        if (details_obj['gold_value'] == nil or show_sell == false or show_sell == nil) then
+            dialog:find('btn4').visible = false
+        elseif (show_sell == true) then
+            dialog:find('btn4').visible = true
+        end
+        
         local details = dialog:find('details')
         details.label = format_object(details_obj)
         local image = dialog:find('image')
-        image.label = item_img.."~BLIT(misc/achievement-frames/frame-9-red.png)"
+        image.label = details_obj.image.."~BLIT(misc/achievement-frames/frame-9-red.png)"
+        
         if btn1_text ~= nil then
             local btn1 = dialog:find('btn1')
             btn1.label = btn1_text
@@ -33,6 +59,10 @@ function show_stats_dialog(item_img, details_obj, btn1_text, btn2_text)
         if btn2_text ~= nil then
             local btn2 = dialog:find('btn2')
             btn2.label = btn2_text
+        end
+        if btn3_text ~= nil then
+            local btn3 = dialog:find('btn3')
+            btn3.label = btn3_text
         end
     end
     
@@ -80,6 +110,9 @@ end
 function equip(curr_unit, item_type, item)
     if item ~= nil then
         curr_unit:add_modification("object", item)
+        local trait = EQUIP_TRAIT
+        trait.description = EQUIP_TRAIT.description..item.name
+        curr_unit:add_modification("trait", EQUIP_TRAIT, true)
         curr_unit.variables[item_type..'.object'] = item
     end
 end
@@ -117,7 +150,7 @@ function inventory_init(dialog)
         nodes[i].item_name.label = ITEM_TYPES[i][2]
         nodes[i].unfolded = true
     end
-
+    
     -- Add items to the treeview
     for i=0,3 do
         local len = wml.variables['stored_'..ITEM_TYPES[i][1]..'s.length']
@@ -132,7 +165,7 @@ function inventory_init(dialog)
         x = wml.variables['x1'],
         y = wml.variables['y1']
     }[1]
-
+    
     local imgs = {}
     local items = {}
     if check_has_item(curr_unit) then
@@ -142,24 +175,57 @@ function inventory_init(dialog)
                 items[i] = curr_unit.variables[ITEM_TYPES[i][1]][1][2]
                 imgs[i].label = items[i].image.."~BLIT("..ITEM_TYPES[i][3]..")"
                 dialog:find(ITEM_TYPES[i][1].."_btn").on_button_click = function()
-                    local status = show_stats_dialog(items[i].image, items[i], "Unequip", "Drop")
+                    local status = show_stats_dialog(items[i], "Unequip", "Drop", nil, true)
                     if status == 1 then
-                        local item = get_item_from_unit(curr_unit, ITEM_TYPES[i][1], true)
-                        imgs[i].label = ITEM_TYPES[i][3]
-                        add_item_to_storage(ITEM_TYPES[i][1], item)
+                        local item_readonly = get_item_from_unit(curr_unit, ITEM_TYPES[i][1], false)
+                        if (item_readonly.locked ~= true) then
+                            local item = get_item_from_unit(curr_unit, ITEM_TYPES[i][1], true)
+                            imgs[i].label = ITEM_TYPES[i][3]
+                            add_item_to_storage(ITEM_TYPES[i][1], item)
+                        else
+                            if (item_readonly.lock_msg ~= nil) then
+                                gui.show_popup(LOCK_TITLE, item_readonly.lock_msg)
+                            else
+                                gui.show_popup(LOCK_TITLE, LOCK_MSG)
+                            end
+                        end
                     elseif status == 3 then
-                        local item = get_item_from_unit(curr_unit, ITEM_TYPES[i][1], true)
-                        drop(item, ITEM_TYPES[i][1])
-                        imgs[i].label = ITEM_TYPES[i][3]
+                        local item_readonly = get_item_from_unit(curr_unit, ITEM_TYPES[i][1], false)
+                        if (item_readonly.locked ~= true) then
+                            local item = get_item_from_unit(curr_unit, ITEM_TYPES[i][1], true)
+                            imgs[i].label = ITEM_TYPES[i][3]
+                            drop(item, ITEM_TYPES[i][1])
+                        else
+                            if (item_readonly.lock_msg ~= nil) then
+                                gui.show_popup(LOCK_TITLE, item_readonly.lock_msg)
+                            else
+                                gui.show_popup(LOCK_TITLE, LOCK_MSG)
+                            end
+                        end
+                    elseif status == 4 then
+                        local item_readonly = get_item_from_unit(curr_unit, ITEM_TYPES[i][1], false)
+                        if (item_readonly.locked ~= true) then
+                            get_item_from_unit(curr_unit, ITEM_TYPES[i][1], true)
+                            imgs[i].label = ITEM_TYPES[i][3]
+                            local cost = item_readonly.gold_value
+                            wesnoth.sides.get(curr_unit.side).gold = wesnoth.sides.get(curr_unit.side).gold + cost
+                            wesnoth.interface.add_chat_message("WISh", "Item "..item_readonly.name.." sold for "..cost.." gold.")
+                        else
+                            if (item_readonly.lock_msg ~= nil) then
+                                gui.show_popup(LOCK_TITLE, item_readonly.lock_msg)
+                            else
+                                gui.show_popup(LOCK_TITLE, LOCK_MSG)
+                            end
+                        end
                     end
                     items[i] = nil
                 end
             end
         end
     end
-
+    
     local storage_list = dialog:find("storage_list")
-
+    
     -- Inventory Show Button
     local inventory_show = dialog:find("inv_show")
     inventory_show.on_button_click = function()
@@ -167,7 +233,7 @@ function inventory_init(dialog)
         local node_name = ITEM_TYPES[node_id][1]
         local subnode_id = storage_list.selected_item_path[2]-1
         local item_obj = get_item_from_storage(node_name, subnode_id, false)
-        local status = show_stats_dialog(item_obj.image, item_obj, "Equip", "Drop")
+        local status = show_stats_dialog(item_obj, "Equip", "Drop", nil, true)
         if status == 3 then
             remove_from_storage(node_name, subnode_id)
             nodes[node_id]:remove_items_at(subnode_id, 1)
@@ -176,10 +242,16 @@ function inventory_init(dialog)
             remove_from_storage(node_name, subnode_id)
             nodes[node_id]:remove_items_at(subnode_id, 1)
             equip(curr_unit, node_name, item_obj)
+        elseif status == 4 then
+            remove_from_storage(node_name, subnode_id)
+            nodes[node_id]:remove_items_at(subnode_id, 1)
+            local cost = item_obj.gold_value
+            wesnoth.sides.get(curr_unit.side).gold = wesnoth.sides.get(curr_unit.side).gold + cost
+            wesnoth.interface.add_chat_message("WISh", "Item "..item_obj.name.." sold for "..cost.." gold.")
         end
         dialog:close()
     end
-
+    
 end
 
 -- Show the inventory
