@@ -20,20 +20,19 @@ LOCK_MSG = "This item is <i>locked</i> and cannot be removed normally!"
 
 -- given object, return a formatted string describing it
 function format_object(object)
-    local formatted_text
-    formatted_text =
-    "<span foreground='yellow'><big>"
-    ..object['name']
-    .."</big></span>\n<i>"
-    ..object['description']
-    .."</i>\n"
+    local formatted_text =
+        "<span foreground='yellow'><big>"
+        ..object['name']
+        .."</big></span>\n<i>"
+        ..object['description']
+        .."</i>\n"
     
     if (object['gold_value'] ~= nil) then
         formatted_text =
-        formatted_text
-        .."Value: "
-        ..object['gold_value']
-        .." gold"
+            formatted_text
+            .."Value: "
+            ..object['gold_value']
+            .." gold"
     end
     return formatted_text
 end
@@ -66,7 +65,7 @@ function show_stats_dialog(details_obj, btn1_text, btn2_text, btn3_text, show_se
         end
     end
     
-    return gui.show_dialog(wml.get_child(wml.load("~add-ons/Frost_Mage/gui/item_stats.cfg"), "resolution"), preshow, function() end)
+    return gui.show_dialog(wml.get_child(wml.load("~add-ons/WISh/gui/item_stats.cfg"), "resolution"), preshow, function() end)
 end
 
 -- get item from storage
@@ -92,6 +91,10 @@ function get_item_from_unit(curr_unit, item_type, remove)
     if remove then
         curr_unit.variables[item_type] = nil
         curr_unit:remove_modifications({id = item.id})
+        -- check if any other items exist, if not, remove trait
+        if (check_has_item(curr_unit) == false) then
+            curr_unit:remove_modifications({id = "equipped"}, "trait")
+        end
     end
     return item
 end
@@ -117,7 +120,7 @@ function equip(curr_unit, item_type, item)
     end
 end
 
--- drop an item, half of the work is done in wml
+-- drop an item, rest of the work is done in wml
 function drop(item, type)
     if item ~= nil then
         wml.variables['drop'] = true
@@ -130,7 +133,7 @@ end
 function check_has_item(curr_unit)
     local has_item = false
     for i=0,3 do
-        if get_item_from_unit(curr_unit, ITEM_TYPES[i][1], false) ~= nil then
+        if curr_unit.variables[ITEM_TYPES[i][1]..'.object'] ~= nil then
             has_item = true
         end
     end
@@ -140,6 +143,8 @@ end
 --------------------------------------------------------------
 -- Inventory preshow method
 -- accessed via the "Inventory" menu item
+--------------------------------------------------------------
+
 function inventory_init(dialog)
     -- Storage --
     -- Initialize treeview
@@ -152,8 +157,10 @@ function inventory_init(dialog)
     end
     
     -- Add items to the treeview
+    items_count = 0
     for i=0,3 do
         local len = wml.variables['stored_'..ITEM_TYPES[i][1]..'s.length']
+        items_count = items_count + len
         for j=0,len-1 do
             local node = nodes[i]:add_item_of_type("item")
             node.item_name.label = wml.variables['stored_'..ITEM_TYPES[i][1]..'s['..j..'].object.name']
@@ -165,6 +172,9 @@ function inventory_init(dialog)
         x = wml.variables['x1'],
         y = wml.variables['y1']
     }[1]
+
+    -- Set name and type of unit
+    dialog:find("unit_name").label = "<span size='x-large' face='Serif'>"..curr_unit.name.."</span><span face='OldaniaADFStd' size='x-large'> ("..curr_unit.type..")".."</span>"
     
     local imgs = {}
     local items = {}
@@ -208,7 +218,11 @@ function inventory_init(dialog)
                             get_item_from_unit(curr_unit, ITEM_TYPES[i][1], true)
                             imgs[i].label = ITEM_TYPES[i][3]
                             local cost = item_readonly.gold_value
+                            -- this adds the gold to the side gold amount
                             wesnoth.sides.get(curr_unit.side).gold = wesnoth.sides.get(curr_unit.side).gold + cost
+                            -- play sound to give audible cue
+                            wesnoth.audio.play("gold.ogg")
+                            -- we give feedback to the user on what has been done
                             wesnoth.interface.add_chat_message("WISh", "Item "..item_readonly.name.." sold for "..cost.." gold.")
                         else
                             if (item_readonly.lock_msg ~= nil) then
@@ -224,29 +238,43 @@ function inventory_init(dialog)
         end
     end
     
-    local storage_list = dialog:find("storage_list")
-    
-    -- Inventory Show Button
+    -- Inventory Show Button handling
     local inventory_show = dialog:find("inv_show")
+    local storage_list = dialog:find("storage_list")
+
+    -- disable by default, only enable on valid selection
+    inventory_show.enabled = false
+    storage_list.on_modified = function()
+        inventory_show.enabled = (storage_list.selected_item_path[2] ~= nil) and (items_count ~= 0)
+    end
+
     inventory_show.on_button_click = function()
         local node_id = storage_list.selected_item_path[1]-1
+        local sel_subnode_id = storage_list.selected_item_path[2]
+        if sel_subnode_id == nil then
+            return
+        end
+
         local node_name = ITEM_TYPES[node_id][1]
-        local subnode_id = storage_list.selected_item_path[2]-1
+        local subnode_id = sel_subnode_id-1
         local item_obj = get_item_from_storage(node_name, subnode_id, false)
         local status = show_stats_dialog(item_obj, "Equip", "Drop", nil, true)
-        if status == 3 then
+        if status ~= 2 then
             remove_from_storage(node_name, subnode_id)
             nodes[node_id]:remove_items_at(subnode_id, 1)
+        end
+
+        if status == 3 then
             drop(item_obj, node_name)
         elseif status == 1 then
-            remove_from_storage(node_name, subnode_id)
-            nodes[node_id]:remove_items_at(subnode_id, 1)
             equip(curr_unit, node_name, item_obj)
         elseif status == 4 then
-            remove_from_storage(node_name, subnode_id)
-            nodes[node_id]:remove_items_at(subnode_id, 1)
             local cost = item_obj.gold_value
+            -- this adds the gold to the side gold amount
             wesnoth.sides.get(curr_unit.side).gold = wesnoth.sides.get(curr_unit.side).gold + cost
+            -- play sound to give audible cue
+            wesnoth.audio.play("gold.ogg")
+            -- we give feedback to the user on what has been done
             wesnoth.interface.add_chat_message("WISh", "Item "..item_obj.name.." sold for "..cost.." gold.")
         end
         dialog:close()
@@ -256,7 +284,7 @@ end
 
 -- Show the inventory
 function show_inventory()
-    gui.show_dialog(wml.get_child(wml.load("~add-ons/Frost_Mage/gui/inventory.cfg"), "resolution"), inventory_init, function() end)
+    gui.show_dialog(wml.get_child(wml.load("~add-ons/WISh/gui/inventory.cfg"), "resolution"), inventory_init, function() end)
 end
 
 ----------------------------------------------------------
@@ -273,7 +301,7 @@ function wesnoth.wml_actions.put_item(cfg)
         first_time_only = false,
         filter = child,
         action = function()
-            gui.alert(wesnoth.as_text(child))
+            --gui.alert(wesnoth.as_text(child))
         end
     }
 end
