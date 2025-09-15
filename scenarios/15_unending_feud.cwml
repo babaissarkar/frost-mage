@@ -14,11 +14,11 @@
 		text= _ "Noct"
 	[/label]
 	[label]
-		x,y=23,9
+		x,y=29,10
 		text= _ "R. Siverrill"
 	[/label]
 	[label]
-		x,y=30,15
+		x,y=37,16
 		text= _ "Diurna"
 	[/label]
 	[item]
@@ -30,6 +30,7 @@
 		side=1
 		controller=human
 		team_name=good
+		no_leader=yes
 		{INCOME 0 0 0}
 		{GOLD 120 100 100}
 		village_gold=0
@@ -38,13 +39,6 @@
 		team_name=erinna
 		user_team_name= _ "Elves"
 		recruit = Elvish Hero, Elvish Ranger, Elvish Rider, Elvish Captain, Elvish Marksman
-		[leader]
-			# wmllint: recognize eliel
-			{CHARACTER_STATS:ELIEL}
-			x,y=4,1
-			type=Elvish Lady Marshal
-			canrecruit=yes
-		[/leader]
 		[unit]
 			# wmllint: recognize kalenz
 			id=kalenz
@@ -73,6 +67,22 @@
 
 	[event]
 		name=start
+
+		[set_variable]
+			name=all_passed
+			value=0
+		[/set_variable]
+
+		[unit]
+			# wmllint: recognize eliel
+			{CHARACTER_STATS:ELIEL}
+			x,y=4,1
+			type=Elvish Lady Marshal
+		[/unit]
+		{MAKE_LOYAL_LEADER eliel}
+		{MAKE_HERO kalenz}
+		{MAKE_HERO liyesa}
+		{MAKE_HERO mage}
 
 		{MSG eliel (_"This is bad. We must cross this river fast, or the black ones will soon catch us.")}
 		{MSG kalenz (_"One of your friends can fly and the other can walk on water. But we can do neither. So the only way for us is through these cities. The bridge should still be intact. ")}
@@ -118,5 +128,84 @@
 
 			{TURNS_RUN_OUT}
 		[/objectives]
+	[/event]
+
+	[event]
+		name=moveto
+		first_time_only=yes
+		[filter]
+			side=1
+			[filter_location x,y=46-48,16-18]
+		[/filter]
+
+		{MSG unit (_"I can see the exit! Everyone, hurry!")}
+		{HIGHLIGHT_IMAGE 53 20 scenery/signpost.png ()}
+
+		# so we can use their names in the objectives below
+		{STORE liyesa KILL=no}
+		{STORE kalenz KILL=no}
+		{STORE mage KILL=no}
+		{STORE eliel KILL=no}
+
+		[objectives]
+			side=1
+			[objective]
+				description= _ "All heros must reach the signpost."
+				condition=win
+			[/objective]
+			[objective]
+				description= _ "Death of Heros."
+				condition=lose
+			[/objective]
+			[note]
+				description= _ "The heroes are: $eliel.name, $kalenz.name, $liyesa.name, $mage.name."
+			[/note]
+			{TURNS_RUN_OUT}
+		[/objectives]
+	[/event]
+
+	# Win event
+	[event]
+		name=moveto
+		first_time_only=no
+		[filter]
+			id=eliel,kalenz,liyesa,mage
+			[filter_location x,y=53,20]
+		[/filter]
+
+		[if]
+			[variable]
+				name=unit.id
+				equals=eliel
+			[/variable]
+			[then]
+				[if]
+					[variable]
+						name=all_passed
+						equals=3
+					[/variable]
+					[then]
+						{CLEAR_VARIABLE all_passed}
+						[endlevel]
+							result=victory
+							carryover_percentage=0
+							carryover_add=no
+							bonus=no
+						[/endlevel]
+					[/then]
+					[else]
+						{MSG eliel _"Go, everyone. I'll go last."}
+					[/else]
+				[/if]
+			[/then]
+			[else]
+				{STORE $unit.id KILL=yes}
+				{UNSTORE $unit.id "recall" "recall"}
+				[set_variable]
+					name=all_passed
+					add=1
+				[/set_variable]
+			[/else]
+		[/if]
 	[/event]
 [/scenario]
