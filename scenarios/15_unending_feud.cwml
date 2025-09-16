@@ -39,28 +39,41 @@
 		team_name=erinna
 		user_team_name= _ "Elves"
 		recruit = Elvish Hero, Elvish Ranger, Elvish Rider, Elvish Captain, Elvish Marksman
+		[leader]
+			# wmllint: recognize eliel
+			{CHARACTER_STATS:ELIEL}
+			x,y=2,1
+			type=Elvish Lady Marshal
+			canrecruit=yes
+			facing=se
+		[/leader]
 		[unit]
 			# wmllint: recognize kalenz
 			id=kalenz
 			type=Elvish High Lord
 			name= _ "Mysterious Lord"
 			placement=leader
+			facing=se
 			profile="portraits/elves/hidden-elflord.webp"
 			[modifications {TRAIT_AGED}]
 			[abilities leadership]
 		[/unit]
 		[unit]
+			# wmllint: recognize liyesa
 			id=liyesa
 			name= _ "Liyesa"
 			type=Elvish Lady
 			placement=leader
+			facing=se
 			profile="portraits/elves/joafm-druid.webp"
 		[/unit]
 		[unit]
+			# wmllint: recognize mage
 			id=mage
 			side=1
 			type=Mage
 			placement=leader
+			facing=se
 			[modifications {TRAIT_LOYAL}]
 		[/unit]
 	[/side]
@@ -73,13 +86,6 @@
 			value=0
 		[/set_variable]
 
-		[unit]
-			# wmllint: recognize eliel
-			{CHARACTER_STATS:ELIEL}
-			x,y=4,1
-			type=Elvish Lady Marshal
-		[/unit]
-		{MAKE_LOYAL_LEADER eliel}
 		{MAKE_HERO kalenz}
 		{MAKE_HERO liyesa}
 		{MAKE_HERO mage}
@@ -164,6 +170,26 @@
 		[/objectives]
 	[/event]
 
+	[event]
+		name=enter_hex
+		first_time_only=no
+
+		[filter]
+			side=1
+			[filter_location terrain=Rp^Vhcr]
+		[/filter]
+
+		{MSG kalenz (_ "Do not go there, buildings have undead inside!")}
+
+		[cancel_action /]
+
+		[move_unit]
+			id=$unit.id
+			to_x=$x2
+			to_y=$y2
+		[/move_unit]
+	[/event]
+
 	# Win event
 	[event]
 		name=moveto
@@ -194,6 +220,11 @@
 						[/endlevel]
 					[/then]
 					[else]
+						[move_unit]
+							id=eliel
+							to_x=53
+							to_y=21
+						[/move_unit]
 						{MSG eliel _"Go, everyone. I'll go last."}
 					[/else]
 				[/if]
