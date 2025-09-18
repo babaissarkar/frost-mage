@@ -78,6 +78,46 @@
 		[/unit]
 	[/side]
 
+	[side]
+		side=2
+		controller=human
+		team_name=noct
+		no_leader=yes
+		user_team_name= _ "Noct Undead"
+		hidden=yes
+	[/side]
+
+	[side]
+		side=3
+		controller=human
+		team_name=diurna
+		no_leader=yes
+		user_team_name= _ "Diurna Undead"
+		hidden=yes
+	[/side]
+
+	[event]
+		#1 19/14 2/26 5
+		name=side 2 turn
+		first_time_only=no
+
+		{RANDOM_UNDEAD 1 19 2}
+		{RANDOM_UNDEAD 14 2 2}
+		{RANDOM_UNDEAD 26 5 2}
+		{RANDOM_UNDEAD 17 7 2}
+	[/event]
+
+	[event]
+		#1 19/14 2/26 5
+		name=side 3 turn
+		first_time_only=no
+
+		{RANDOM_UNDEAD 30 20 3}
+		{RANDOM_UNDEAD 37 10 3}
+		{RANDOM_UNDEAD 50 10 3}
+		{RANDOM_UNDEAD 47 8 3}
+	[/event]
+
 	[event]
 		name=start
 
@@ -239,4 +279,7 @@
 			[/else]
 		[/if]
 	[/event]
+
+	{DEATH_EVENT (liyesa,kalenz,eliel,mage)}
+	{TURNS_RUN_OUT}
 [/scenario]
