@@ -80,7 +80,7 @@
 
 	[side]
 		side=2
-		controller=human
+		controller=ai
 		team_name=noct
 		no_leader=yes
 		user_team_name= _ "Noct Undead"
@@ -89,7 +89,7 @@
 
 	[side]
 		side=3
-		controller=human
+		controller=ai
 		team_name=diurna
 		no_leader=yes
 		user_team_name= _ "Diurna Undead"
@@ -101,10 +101,11 @@
 		name=side 2 turn
 		first_time_only=no
 
-		{RANDOM_UNDEAD 1 19 2}
-		{RANDOM_UNDEAD 14 2 2}
-		{RANDOM_UNDEAD 26 5 2}
-		{RANDOM_UNDEAD 17 7 2}
+		# Normal Difficulty: any one of two L1, one L2
+		{RANDOM_UNDEAD 1 19 2 TYPE="Ghoul,Skeleton,Bone Shooter"}
+		{RANDOM_UNDEAD 14 2 2 TYPE="Thrall,Skeleton Archer,Revenant"}
+		{RANDOM_UNDEAD 26 5 2 TYPE="Ghost,Skeleton,Iron Thrall"}
+		{RANDOM_UNDEAD 17 7 2 TYPE="Necrophage,Thrall,Wraith"}
 	[/event]
 
 	[event]
@@ -112,10 +113,11 @@
 		name=side 3 turn
 		first_time_only=no
 
-		{RANDOM_UNDEAD 30 20 3}
-		{RANDOM_UNDEAD 37 10 3}
-		{RANDOM_UNDEAD 50 10 3}
-		{RANDOM_UNDEAD 47 8 3}
+		# Normal Difficulty: any one of two L1, one L2
+		{RANDOM_UNDEAD 30 20 3 TYPE="Ghost,Skeleton,Iron Thrall"}
+		{RANDOM_UNDEAD 37 10 3 TYPE="Ghoul,Skeleton,Bone Shooter"}
+		{RANDOM_UNDEAD 50 10 3 TYPE="Necrophage,Thrall,Wraith"}
+		{RANDOM_UNDEAD 47 8 3 TYPE="Thrall,Skeleton Archer,Revenant"}
 	[/event]
 
 	[event]
@@ -281,5 +283,5 @@
 	[/event]
 
 	{DEATH_EVENT (liyesa,kalenz,eliel,mage)}
-	{TURNS_RUN_OUT}
+	{TIMEOUT_EVENT}
 [/scenario]
