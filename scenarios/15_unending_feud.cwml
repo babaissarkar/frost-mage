@@ -6,6 +6,7 @@
 	map_file="~add-ons/Frost_Mage/maps/15_unending_feud.map"
 	{TURNS 20 17 15}
 	victory_when_enemies_defeated=no
+	next_scenario=16_a_swampy_day
 
 	{DEFAULT_SCHEDULE}
 
