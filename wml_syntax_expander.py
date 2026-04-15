@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 
 import re
+import shlex
 import sys
 
 def expand_inline_or_self_closing(line):
@@ -18,17 +19,37 @@ def expand_inline_or_self_closing(line):
     if not expand:
         return line
     if content:
-        args: list[str] = []
-        for arg in re.split(r"\s+", content):
-            if (tag == "specials"):
-                args.append(f"{{WEAPON_SPECIAL_{arg.upper()}}}")
-            elif (tag == "abilities"):
-                args.append(f"{{ABILITY_{arg.upper()}}}")
+        direct: list[str] = []
+        nested: dict[str, list[str]] = {}  # subtag -> [key=value, ...]
+        for arg in shlex.split(content):
+            dot_match = re.match(r'^(\w+)\.(\w+=\S+)$', arg)
+            if dot_match:
+                subtag, kv = dot_match.groups()
+                nested.setdefault(subtag, []).append(kv)
+            elif tag == "specials":
+                direct.append(f"{{WEAPON_SPECIAL_{arg.upper()}}}")
+            elif tag == "abilities":
+                direct.append(f"{{ABILITY_{arg.upper()}}}")
             else:
-                args.append(arg)
+                direct.append(arg)
 
-        content_body = "\n".join(f"{indent}    {a}" for a in args)
-        return f"{indent}[{tag}]\n{content_body}\n{indent}[/{tag}]"
+        lines_out: list[str] = []
+        for a in direct:
+            if "=" in a:
+                k, v = a.split("=", 1)
+                a = f'{k}="{v}"' if " " in v else a
+            lines_out.append(f"{indent}\t{a}")
+        for subtag, kvs in nested.items():
+            lines_out.append(f"{indent}\t[{subtag}]")
+            for kv in kvs:
+                lines_out.append(f"{indent}\t\t{kv}")
+            lines_out.append(f"{indent}\t[/{subtag}]")
+        content_body = "\n".join(lines_out)
+        always_close = {"specials", "abilities"}
+        if slash or tag in always_close:
+            return f"{indent}[{tag}]\n{content_body}\n{indent}[/{tag}]"
+        else:
+            return f"{indent}[{tag}]\n{content_body}"
     else:
         return f"{indent}[{tag}]\n{indent}[/{tag}]"
 
@@ -36,11 +57,15 @@ def process_file(input_file, output_file=None):
     if output_file is None:
         output_file = input_file
     with open(input_file, 'r', encoding='utf-8') as f:
-        lines = [l.rstrip('\n') for l in f.readlines()]
+        raw = f.read()
+    had_trailing_newline = raw.endswith('\n')
+    lines = raw.splitlines()
     # Pass 1: expand self-closing / inline tags
     lines = [expand_inline_or_self_closing(l) for l in lines]
     with open(output_file, 'w', encoding='utf-8') as f:
-        f.write("\n".join(lines) + "\n")
+        f.write("\n".join(lines))
+        if had_trailing_newline:
+            f.write("\n")
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
