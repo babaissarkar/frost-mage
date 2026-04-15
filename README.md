@@ -22,7 +22,7 @@ Some files in this repository use a **sugared WML syntax** for brevity.
 
 
 - `[specials slow magical]` expands to:
-  
+
 ```ini
   [specials]
       {WEAPON_SPECIAL_SLOW}
@@ -31,7 +31,7 @@ Some files in this repository use a **sugared WML syntax** for brevity.
 ```
 
   - `[abilities teleport]` expands to:
-  
+
 ```ini
   [abilities]
       {ABILITY_TELEPORT}
