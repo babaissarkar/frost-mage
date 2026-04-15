@@ -34,12 +34,8 @@
 			placement=leader
 			facing=ne
 			profile="portraits/elves/kalenz.webp"
-			[modifications]
-				{TRAIT_AGED}
-			[/modifications]
-			[abilities]
-				{ABILITY_LEADERSHIP}
-			[/abilities]
+			[modifications {TRAIT_AGED} /]
+			[abilities leadership]
 		[/unit]
 		[unit]
 			# wmllint: recognize liyesa
@@ -62,12 +58,7 @@
 		{GOLD 500 700 900}
 
 		recruit = Flesh Artisan, Blood Hulk, Duelist, Noble, Blood Manipulator, Half Blood
-		[leader]
-			id=xylia
-			name="Duchess Xylia"
-			type=Duchess
-			facing=sw
-		[/leader]
+		[leader id=xylia name="Duchess Xylia" type=Duchess facing=sw /]
 	[/side]
 
 	[side]
@@ -80,15 +71,10 @@
 		{GOLD 500 700 900}
 
 		recruit = Stone Golem,Ice Crab,Thunderbird,Vine Tiger,Zephyr,Undine,Unstable Elemental
-		[leader]
-			id=elemental_lord
-			type="Greater Earth Daemon"
-			facing=nw
-		[/leader]
+		[leader id=elemental_lord type="Greater Earth Daemon" facing=nw /]
 	[/side]
 
-	[event]
-		name=start
+	[event name=start]
 		# Intro dialog between Kalenz & Eliel about this forest. Some bittersweet thoughts of
 		# Erinna maybe. Kalenz assures they are are not too far from her.
 		{MSG kalenz _"This forest lies far enough from the roads. The refugees should be safe here — at least for a time."}
@@ -108,17 +94,11 @@
 			type=Elvish Rider
 			x,y=26,15
 			hitpoints=10
-			[modifications]
-				{TRAIT_LOYAL}
-			[/modifications]
+			[modifications {TRAIT_LOYAL} /]
 		[/unit]
 		{MAKE_HERO scout}
 
-		[move_unit]
-			id=scout
-			to_x=20
-			to_y=7
-		[/move_unit]
+		[move_unit id=scout to_x=20 to_y=7 /]
 
 		{MSG scout (_ "My Lord, this is bad. There seems to be other creatures here, humanoid. They have an organized patrol which injured several of our scouts.")}
 		{MSG kalenz (_ "Any chance we can avoid fighting them? We are weak from the journey as it is.")}
@@ -163,25 +143,12 @@
 
 	[/event]
 
-	[event]
-		name="last breath"
-		first_time_only=yes
-		[filter]
-			id=elemental_lord
-		[/filter]
-		[filter_second]
-			side=1
-		[/filter_second]
+	[event name="last breath" first_time_only=yes filter.id=elemental_lord filter_second.side=1]
 
 		{MSG eliel (_"Finally. Now we have a place to settle.")}
 		{MSG kalenz (_"Given the distance from the vampire stronghold and the rogue elementals in this area, I believe we can rest easy, yes.")}
 
-		[endlevel]
-			result=victory
-			carryover_percentage=40
-			carryover_add=no
-			bonus=no
-		[/endlevel]
+		[endlevel result=victory carryover_percentage=40 carryover_add=no bonus=no /]
 	[/event]
 
 	{DEATH_EVENT (kalenz,liyesa,eliel,xylia)}
