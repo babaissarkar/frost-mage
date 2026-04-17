@@ -104,21 +104,19 @@ If a value contains a space, the expander automatically quotes it (e.g., `key="v
 
 
 * If you see `.cwml` files or the `/]` self-closing syntax, the **expander is involved**.
-* Run the expander tool to generate valid WML:
+* Run the expander tool from repo root to generate valid WML:
 
   ```bash
-  python wml_expand.py input.cwml [output.cfg]
+  python wml_expand.py
   ```
 
-  If no output file is given, the input file is overwritten (use with care).
-
-* **Original `.cwml` files are preserved** (if you explicitly write to a different output). It is recommended to keep source files as `.cwml` and generate `.cfg` files for distribution.
+  This recursively finds any cwml file and generates the cfg file from it. Original `.cwml` files are preserved.
 
 * Always backup before testing or editing `.cwml` files.
 
 * To use this syntax in your own add-on:
   <br/>
-  1. Copy `wml_expand.py` (and any helper scripts) to your add-on root.
+  1. Copy `wml_expand.py` to your add-on root.
   2. Rename your `.cfg` files to `.cwml`.
   3. Edit them using the sugared syntax.
   4. Run `wml_expand.py` on each `.cwml` file (or write a batch script) before releasing or testing.
