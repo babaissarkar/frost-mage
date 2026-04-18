@@ -22,12 +22,22 @@ def expand_inline_or_self_closing(line):
     if content:
         direct: list[str] = []
         nested: dict[str, list[str]] = {}  # subtag -> [key=value, ...]
-        for arg in shlex.split(content):
-            dot_match = re.match(r'^(\w+)\.(\w+=\S+)$', arg)
-            if dot_match:
-                subtag, kv = dot_match.groups()
-                nested.setdefault(subtag, []).append(kv)
-            elif tag == "specials":
+
+        # Pre-process dot-notation args BEFORE shlex.split so quoted values
+        # with spaces (e.g. filter_attack.name="natural essence") are handled
+        # correctly. shlex would otherwise split "natural essence" into two tokens,
+        # breaking the dot-notation regex.
+        remaining_content = content
+        for dot_match in re.finditer(r'(\w+)\.(\w+)=(\"[^\"]*\"|\S+)', content):
+            full = dot_match.group(0)
+            subtag, key, val = dot_match.group(1), dot_match.group(2), dot_match.group(3)
+            nested.setdefault(subtag, []).append(f'{key}={val}')
+            remaining_content = remaining_content.replace(full, '', 1)
+
+        for arg in shlex.split(remaining_content):
+            if not arg:
+                continue
+            if tag == "specials":
                 direct.append(f"{{WEAPON_SPECIAL_{arg.upper()}}}")
             elif tag == "abilities":
                 direct.append(f"{{ABILITY_{arg.upper()}}}")
