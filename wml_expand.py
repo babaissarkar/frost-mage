@@ -64,6 +64,42 @@ def expand_inline_or_self_closing(line):
     else:
         return f"{indent}[{tag}]\n{indent}[/{tag}]"
 
+def expand_brace_blocks(lines):
+    """
+    Pass 0: expand brace-block syntax into standard WML tags.
+
+    attack [          ->  [attack]
+        name=staff    ->      name=staff
+    ]                 ->  [/attack]
+
+    Rules:
+    - Opening line pattern: tagname followed by [ at line end
+    - Body lines are indented one tab deeper (relative)
+    - Closing ] must be at the same indent as the opening line
+    - No nesting support yet
+    """
+    out = []
+    open_pat = re.compile(r'^([ \t]*)(\w+)\s*\[$')
+    i = 0
+    while i < len(lines):
+        m = open_pat.match(lines[i])
+        if m:
+            indent, tag = m.group(1), m.group(2)
+            close = indent + ']'
+            out.append(f"{indent}[{tag}]")
+            i += 1
+            while i < len(lines):
+                if lines[i].rstrip() == close:
+                    out.append(f"{indent}[/{tag}]")
+                    i += 1
+                    break
+                out.append(lines[i])
+                i += 1
+        else:
+            out.append(lines[i])
+            i += 1
+    return out
+
 def process_file(input_file, output_file=None):
     if output_file is None:
         output_file = input_file
@@ -71,6 +107,8 @@ def process_file(input_file, output_file=None):
         raw = f.read()
     had_trailing_newline = raw.endswith('\n')
     lines = raw.splitlines()
+    # Pass 0: expand brace-block syntax
+    lines = expand_brace_blocks(lines)
     # Pass 1: expand self-closing / inline tags
     lines = [expand_inline_or_self_closing(l) for l in lines]
     with open(output_file, 'w', encoding='utf-8') as f:
@@ -78,10 +116,119 @@ def process_file(input_file, output_file=None):
         if had_trailing_newline:
             f.write("\n")
 
+
+def run_tests():
+    """
+    Inline unit tests. Run with: ./wml_expand.py test
+    Each test: (description, input_lines, expected_output_lines).
+    Both passes applied, same pipeline as process_file.
+    """
+    def pipeline(lines):
+        lines = expand_brace_blocks(lines)
+        lines = [expand_inline_or_self_closing(l) for l in lines]
+        out = []
+        for l in lines:
+            out.extend(l.split("\n"))
+        return out
+
+    tests = [
+        (
+            "self-closing tag with attribute",
+            ["[resistance arcane=90 /]"],
+            ["[resistance]", "\tarcane=90", "[/resistance]"],
+        ),
+        (
+            "self-closing tag no attributes",
+            ["[foo /]"],
+            ["[foo]", "[/foo]"],
+        ),
+        (
+            "inline dot-notation simple value",
+            ["[attack_anim filter_attack.name=staff]"],
+            ["[attack_anim]", "\t[filter_attack]", "\t\tname=staff", "\t[/filter_attack]"],
+        ),
+        (
+            "inline dot-notation quoted value with spaces",
+            ['[attack_anim filter_attack.name="natural essence"]'],
+            ["[attack_anim]", "\t[filter_attack]", '\t\tname="natural essence"', "\t[/filter_attack]"],
+        ),
+        (
+            "specials expansion",
+            ["\t\t[specials slow]"],
+            ["\t\t[specials]", "\t\t\t{WEAPON_SPECIAL_SLOW}", "\t\t[/specials]"],
+        ),
+        (
+            "abilities expansion",
+            ["[abilities leadership]"],
+            ["[abilities]", "\t{ABILITY_LEADERSHIP}", "[/abilities]"],
+        ),
+        (
+            "plain tag unchanged",
+            ["[attack]"],
+            ["[attack]"],
+        ),
+        (
+            "non-tag line unchanged",
+            ["\tname=staff"],
+            ["\tname=staff"],
+        ),
+        (
+            "brace-block basic",
+            ["attack [", "\tname=staff", "\tdamage=5", "]"],
+            ["[attack]", "\tname=staff", "\tdamage=5", "[/attack]"],
+        ),
+        (
+            "brace-block indented",
+            ["\tattack [", "\t\tname=entangle", "\t\tdamage=6", "\t]"],
+            ["\t[attack]", "\t\tname=entangle", "\t\tdamage=6", "\t[/attack]"],
+        ),
+        (
+            "brace-block with specials inside",
+            ["attack [", "\tname=entangle", "\t[specials slow]", "]"],
+            ["[attack]", "\tname=entangle", "\t[specials]", "\t\t{WEAPON_SPECIAL_SLOW}", "\t[/specials]", "[/attack]"],
+        ),
+        (
+            "brace-block space-indented",
+            ["    attack [", "        name=staff", "        damage=5", "    ]"],
+            ["    [attack]", "        name=staff", "        damage=5", "    [/attack]"],
+        ),
+        (
+            "brace-block does not consume deeper ] lines",
+            ["attack [", "\tname=staff", "]", "\tsome_key=val"],
+            ["[attack]", "\tname=staff", "[/attack]", "\tsome_key=val"],
+        ),
+        (
+            "comment line unchanged",
+            ["#textdomain wesnoth-Frost_Mage"],
+            ["#textdomain wesnoth-Frost_Mage"],
+        ),
+        (
+            "macro line unchanged",
+            ["\t{MISSILE_FRAME_FAERIE_FIRE}"],
+            ["\t{MISSILE_FRAME_FAERIE_FIRE}"],
+        ),
+    ]
+
+    passed = 0
+    failed = 0
+    for desc, inp, expected in tests:
+        result = pipeline(inp)
+        if result == expected:
+            print(f"  PASS  {desc}")
+            passed += 1
+        else:
+            print(f"  FAIL  {desc}")
+            print(f"        input:    {inp}")
+            print(f"        expected: {expected}")
+            print(f"        got:      {result}")
+            failed += 1
+
+    print(f"\n{passed} passed, {failed} failed")
+    sys.exit(0 if failed == 0 else 1)
+
 if __name__ == "__main__":
-    if len(sys.argv) < 1:
-        print("Usage: python wml_expand.py [input dir]")
-        sys.exit(1)
+    if len(sys.argv) > 1 and sys.argv[1] == "test":
+        run_tests()
 
     # Directory to start walking from (current dir by default)
     start_dir = sys.argv[1] if len(sys.argv) > 1 else "."
@@ -95,4 +242,5 @@ if __name__ == "__main__":
                 print(f"Processing {input_path} -> {output_path}")
                 process_file(input_path, output_path)
                 print(f"Processed {input_path} -> {output_path}")
+
 
