@@ -1,132 +1,171 @@
-# Introduction
-Source of my Battle for Wesnoth Campaign, Journey of a Frost Mage
+# Journey of a Frost Mage
 
-# Dependencies
+A Battle for Wesnoth campaign. This repository contains the campaign source files, including unit definitions, scenarios, and translations.
+
+## Dependencies
+
 * [War of Legends era](https://github.com/knyghtmare/War_of_Legends)
 * [WISh, the War of Legends Inventory System](https://github.com/babaissarkar/WISh)
 
-## Weird WML Syntax (CWML files)
+---
 
+## For Contributors: the CWML syntax
 
-Some files in this repository use a **sugared WML syntax** for brevity.
+Some files in this repository use the `.cwml` extension instead of `.cfg`. These are written in a **compact, shorthand version of WML** that gets automatically converted to standard `.cfg` files by the included `wml_expand.py` tool. Wesnoth itself only reads the generated `.cfg` files — it does not understand `.cwml` directly.
 
+If you see a `.cwml` file, don't edit the corresponding `.cfg` by hand. Edit the `.cwml` and regenerate.
 
-### Basic syntax
+### Running the expander
 
+From the repository root:
 
-* **Self-closing tags** like `[tag ... /]` or `[tag {MACRO} /]` are allowed.
-* **Inline expansion**: content after the tag name is split and placed on separate lines.
+```bash
+python wml_expand.py
+```
 
+This walks the directory tree, finds all `.cwml` files, and writes a corresponding `.cfg` next to each one. The original `.cwml` is preserved.
 
-#### Special shortcuts
+To run the built-in tests:
 
+```bash
+python wml_expand.py test
+```
 
-- `[specials slow magical]` expands to:
+---
+
+### What the shorthand looks like
+
+#### Self-closing tags
+
+Instead of:
+```ini
+[resistance]
+    arcane=90
+[/resistance]
+```
+
+You can write:
+```ini
+[resistance arcane=90 /]
+```
+
+Any attributes you put inside the tag are expanded onto their own lines automatically.
+
+---
+
+#### Brace-block syntax
+
+Instead of:
+```ini
+[attack]
+    name=staff
+    damage=5
+    number=3
+[/attack]
+```
+
+You can write:
+```ini
+attack [
+    name=staff
+    damage=5
+    number=3
+]
+```
+
+The closing `]` must be at the same indentation level as the opening line.
+
+---
+
+#### Specials and abilities shorthand
+
+Instead of:
+```ini
+[specials]
+    {WEAPON_SPECIAL_SLOW}
+    {WEAPON_SPECIAL_MAGICAL}
+[/specials]
+```
+
+You can write:
+```ini
+[specials slow magical]
+```
+
+The same works for abilities:
+```ini
+[abilities leadership]
+```
+
+The macro names are inferred from the tokens (`slow` → `{WEAPON_SPECIAL_SLOW}`, `leadership` → `{ABILITY_LEADERSHIP}`). The tool does **not** read your macro definitions — the naming convention must match.
+
+---
+
+#### Dot notation for nested sub-tags
+
+Some tags contain a sub-tag purely to hold a filter value, like:
 
 ```ini
-  [specials]
-      {WEAPON_SPECIAL_SLOW}
-      {WEAPON_SPECIAL_MAGICAL}
-  [/specials]
+[attack_anim]
+    [filter_attack]
+        name=staff
+    [/filter_attack]
+    ...
+[/attack_anim]
 ```
 
-  - `[abilities teleport]` expands to:
+You can collapse the sub-tag onto the opening line using dot notation:
 
 ```ini
-  [abilities]
-      {ABILITY_TELEPORT}
-  [/abilities]
+[attack_anim filter_attack.name=staff]
 ```
 
+This works with quoted values too:
 
-*Note: Macro names are inferred from the token (e.g., `slow` → `{WEAPON_SPECIAL_SLOW}`). The tool does *not** read your macro definitions.
-
-
-### Advanced syntax (new!)
-
-
-The expander now supports **quoted arguments** and **nested subtags** using dot notation.
-
-
-##### Quoted arguments with spaces
-
-
-Uses `shlex` parsing -- any shell-quoted string is preserved:
-
-`[event name="my event" first_time_only=no /]`
-
-Expands to:
-
-```inip
-[event]
-    name="my event"
-    first_time_only=no
-[/event]
+```ini
+[attack_anim filter_attack.name="natural essence"]
 ```
 
-> [!WARNING]
-> `[event name=my event first_time_only=no /]` would not work without the quotes!
+---
 
-##### Dot notation for nested subtags
+#### Quoted values
 
+Values containing spaces must be quoted, or the expander will misread them:
 
-Write `subtag.key=value` outside a tag to generate a nested structure:
-
-`[filter location.radius=2 location.x=10-20 /]`
-
-Expands to:
-
-```inip
-[filter]
-    [location]
-        radius=2
-        x=10-20
-    [/location]
-[/filter]
+```ini
+[event name="village attacked" first_time_only=no /]
 ```
 
-You can mix direct attributes and nested subtags in one line.
+> **Note:** `[event name=village attacked first_time_only=no /]` will not work — quote any value that contains a space.
 
+Values without spaces do not need quotes and will be left as-is.
 
-##### Automatic attribute quoting
+---
 
+### Quick reference
 
-If a value contains a space, the expander automatically quotes it (e.g., `key="value with spaces``). Otherwise, it remains unquoted.
+| Shorthand | Expands to |
+|---|---|
+| `[tag key=val /]` | `[tag]\n    key=val\n[/tag]` |
+| `tag [` ... `]` | `[tag]` ... `[/tag]` |
+| `[specials slow]` | `[specials]\n    {WEAPON_SPECIAL_SLOW}\n[/specials]` |
+| `[abilities teleport]` | `[abilities]\n    {ABILITY_TELEPORT}\n[/abilities]` |
+| `[tag sub.key=val]` | `[tag]\n    [sub]\n        key=val\n    [/sub]` |
 
+---
 
-##### Always-closed tags
+## Translation
 
+From the add-ons directory:
 
-`[specials]` and `[abilities]` are **always closed** ( `[/specials]`, `[/abilities]` ), even if you omit the trailing `/`.
+```bash
+path/to/wmlxgettext --directory="Frost_Mage" --domain="wesnoth-Frost_Mage" -o Frost_Mage/translations/wesnoth-Frost_Mage --recursive
+```
 
+Then `cd` into `Frost_Mage/translations/wesnoth-Frost_Mage` and update the `.po` file with new strings from the `.pot` file:
 
-### For Contributors
+```bash
+msgmerge -vU bn.po wesnoth-Frost_Mage.pot
+```
 
-
-* If you see `.cwml` files or the `/]` self-closing syntax, the **expander is involved**.
-* Run the expander tool from repo root to generate valid WML:
-
-  ```bash
-  python wml_expand.py
-  ```
-
-  This recursively finds any cwml file and generates the cfg file from it. Original `.cwml` files are preserved.
-
-* Always backup before testing or editing `.cwml` files.
-
-* To use this syntax in your own add-on:
-  <br/>
-  1. Copy `wml_expand.py` to your add-on root.
-  2. Rename your `.cfg` files to `.cwml`.
-  3. Edit them using the sugared syntax.
-  4. Run `wml_expand.py` on each `.cwml` file (or write a batch script) before releasing or testing.
-  5. Wesnoth will read the generated `.cfg` files (it does not understand `.cwml`).
-
-The expander noww preserves trailing newlines, handles complex arguments robustly, and supports nested structures -- making WML authoring even more concise.
-
-# Translation commands
-From the add-ons directory :
-`path/to/wmlxgettext --directory="Frost_Mage" --domain="wesnoth-Frost_Mage" -o Frost_Mage/translations/wesnoth-Frost_Mage --recursive`
-
-Then `cd` to `Frost_Mage/translations/wesnoth-Frost_Mage` and update the po file with the new strings from the pot file :
-`msgmerge -vU bn.po wesnoth-Frost_Mage.pot` (change bn.po to the correct name for your po file)
+Replace `bn.po` with the correct filename for your language.
