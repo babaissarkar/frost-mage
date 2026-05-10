@@ -78,27 +78,23 @@
         number=2
         [specials magical stun]
     [/attack]
-    [attack_anim]
-        [filter_attack name=iceblast,wave]
-
+    [attack_anim filter_attack.name="iceblast,wave"]
         start_time=-420
 
         {MERMAID_WATER_BLAST_HALO}
         {AQUA_BLAST 11 -20}
         {MERMAID_STAFF_FLARE 16 -12}
 
-        [frame image={FROST-MAGE+FEMALE-ATTACK-MAGIC1}:100]
-        [frame image={FROST-MAGE+FEMALE-ATTACK-MAGIC2}:700]
-        [frame image={FROST-MAGE+FEMALE-ATTACK-MAGIC1}:200]
+        [frame image={FROST-MAGE+FEMALE-ATTACK-MAGIC1}:100 /]
+        [frame image={FROST-MAGE+FEMALE-ATTACK-MAGIC2}:700 /]
+        [frame image={FROST-MAGE+FEMALE-ATTACK-MAGIC1}:200 /]
     [/attack_anim]
-    [attack_anim]
-        [filter_attack name=staff]
-
-        [frame image={FROST-MAGE+FEMALE}:50]
-        [frame image={FROST-MAGE+FEMALE-ATTACK-STAFF1}:100]
-        [frame image={FROST-MAGE+FEMALE-ATTACK-STAFF2}:200]
-        [frame image={FROST-MAGE+FEMALE-ATTACK-MAGIC1}:50]
-        [frame image={FROST-MAGE+FEMALE}:50]
+    [attack_anim filter_attack.name=staff]
+        [frame image={FROST-MAGE+FEMALE}:50 /]
+        [frame image={FROST-MAGE+FEMALE-ATTACK-STAFF1}:100 /]
+        [frame image={FROST-MAGE+FEMALE-ATTACK-STAFF2}:200 /]
+        [frame image={FROST-MAGE+FEMALE-ATTACK-MAGIC1}:50 /]
+        [frame image={FROST-MAGE+FEMALE}:50 /]
     [/attack_anim]
 
     # TODO

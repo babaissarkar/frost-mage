@@ -35,11 +35,10 @@
         number=2
     [/attack]
 
-    [attack_anim]
-        [filter_attack name=mace]
+    [attack_anim filter_attack.name=mace]
         offset=0.0~0.3,0.3~0.5,0.5~0.6,0.6~0.7,0.7~0.6,0.6~0.3,0.3~0.0
         start_time=-330
-        [frame image="units/undead/black_thrall.png:[120*3]"]
+        [frame image="units/undead/black_thrall.png:[120*3]" /]
         {SOUND:HIT_AND_MISS mace.wav {SOUND_LIST:MISS} -400}
     [/attack_anim]
 [/unit_type]

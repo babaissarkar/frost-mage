@@ -84,27 +84,23 @@
         damage=18
         number=2
     [/attack]
-    [attack_anim]
-        [filter_attack name=aquablast,wave]
-
+    [attack_anim filter_attack.name="aquablast,wave"]
         start_time=-420
 
         {MERMAID_WATER_BLAST_HALO}
         {MAGIC_MISSILE 11 -20}
         {MERMAID_STAFF_FLARE 16 -12}
 
-        [frame image={AQUA-MAGE+FEMALE-ATTACK-MAGIC1}:100]
-        [frame image={AQUA-MAGE+FEMALE-ATTACK-MAGIC2}:700]
-        [frame image={AQUA-MAGE+FEMALE-ATTACK-MAGIC1}:200]
+        [frame image={AQUA-MAGE+FEMALE-ATTACK-MAGIC1}:100 /]
+        [frame image={AQUA-MAGE+FEMALE-ATTACK-MAGIC2}:700 /]
+        [frame image={AQUA-MAGE+FEMALE-ATTACK-MAGIC1}:200 /]
     [/attack_anim]
-    [attack_anim]
-        [filter_attack name=staff]
-        
-        [frame image={AQUA-MAGE+FEMALE}:50]
-        [frame image={AQUA-MAGE+FEMALE-ATTACK-STAFF1}:100]
-        [frame image={AQUA-MAGE+FEMALE-ATTACK-STAFF2}:200]
-        [frame image={AQUA-MAGE+FEMALE-ATTACK-MAGIC1}:50]
-        [frame image={AQUA-MAGE+FEMALE}:50]
+    [attack_anim filter_attack.name=staff]
+        [frame image={AQUA-MAGE+FEMALE}:50 /]
+        [frame image={AQUA-MAGE+FEMALE-ATTACK-STAFF1}:100 /]
+        [frame image={AQUA-MAGE+FEMALE-ATTACK-STAFF2}:200 /]
+        [frame image={AQUA-MAGE+FEMALE-ATTACK-MAGIC1}:50 /]
+        [frame image={AQUA-MAGE+FEMALE}:50 /]
     [/attack_anim]
 
     # TODO

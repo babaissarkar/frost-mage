@@ -82,7 +82,7 @@
     [attack_anim filter_attack.name=staff]
         offset=0.0~0.3,0.3~0.45,0.45~0.3,0.3~0.0
         start_time=-250
-        [frame image="units/elves-wood/enchantress-melee-[1~6].png:[90*2,100*4]"]
+        [frame image="units/elves-wood/enchantress-melee-[1~6].png:[90*2,100*4]" /]
         {SOUND:HIT_AND_MISS staff.ogg staff-miss.ogg -125}
     [/attack_anim]
 [/unit_type]
