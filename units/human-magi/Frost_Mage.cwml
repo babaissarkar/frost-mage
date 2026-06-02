@@ -17,8 +17,8 @@
 
     name= _ "female^Frost Mage"
     image={FROST-MAGE+FEMALE}
-    small_profile="portraits/humans/mage-frost+female.png~FL()"
-    profile="portraits/humans/mage-frost+female.png"
+    small_profile="portraits/humans/mage-frost+female.webp~FL()"
+    profile="portraits/humans/mage-frost+female.webp"
     die_sound={SOUND_LIST:HUMAN_FEMALE_DIE}
     {DEFENSE_ANIM {FROST-MAGE+FEMALE-DEFEND} {FROST-MAGE+FEMALE} {SOUND_LIST:HUMAN_FEMALE_HIT} }
 

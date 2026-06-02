@@ -19,7 +19,7 @@
     name= _ "female^Aqua Mage"
     # image="units/human-magi/aqua-mage+female.png~RC(magenta>blue)"
     image={AQUA-MAGE+FEMALE}
-    small_profile="portraits/humans/mage-aqua+female.png~FL()"
+    small_profile="portraits/humans/mage-aqua+female.webp~FL()"
     profile="portraits/humans/mage-aqua+female.webp"
     die_sound={SOUND_LIST:HUMAN_FEMALE_DIE}
     {DEFENSE_ANIM {AQUA-MAGE+FEMALE-DEFEND} {AQUA-MAGE+FEMALE} {SOUND_LIST:HUMAN_FEMALE_HIT} }

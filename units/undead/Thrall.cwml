@@ -3,7 +3,7 @@
     id=Thrall
     name= _ "Thrall"
     race=undead
-    image="units/undead/thrall.png"
+    image="units/undead/thrall.webp"
 	{TRAIT_FEARLESS_MUSTHAVE}
     hitpoints=42
     movement_type=gruefoot
@@ -22,7 +22,7 @@
     description= _ "The life-like appearance of the thrall can confuse people when seen from afar or in the darkness. Nerverthless, the sighting of its swollen and blackened body reveals his true nature as a creation of an evil mind."
     die_sound={SOUND_LIST:ZOMBIE_WEAK_HIT}
     {DEFENSE_ANIM "units/undead/thrall.png" "units/undead/thrall.png" {SOUND_LIST:ZOMBIE_WEAK_HIT} }
-	
+
     [attack]
         name=mace
         description=_"mace"
